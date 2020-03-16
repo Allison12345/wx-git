@@ -1,0 +1,3 @@
+<view class="nav-item {{ isActive }}" bindtap="onTap">
+  <p class="nav-item__label ">{{ label }}</p>
+</view>

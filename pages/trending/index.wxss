@@ -1,0 +1,19 @@
+.nav-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.eva-1 {
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+}
+.eva-2 {
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+}
+.trending {
+  padding-top: 42px;
+}

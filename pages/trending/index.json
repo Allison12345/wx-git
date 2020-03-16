@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "my-page": "../../components/my-page/index",
+    "eva-icon": "../../components/eva-icon/index",
+    "nav-bar-item": "../../components/nav-bar-item/index",
+    "repo-item": "../../components/repo-item/index",
+    "user-item": "../../components/user-item/index"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "pages": ["pages/trending/index", "pages/activity/index", "pages/me/index"],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/trending/index",
+        "text": "趋势",
+        "iconPath": "./assets/eva-icons/outline/png/128/trending-up-outline.png",
+        "selectedIconPath": "./assets/eva-icons/fill/png/128/trending-up.png"
+      },
+      {
+        "pagePath": "pages/activity/index",
+        "text": "动态",
+        "iconPath": "./assets/eva-icons/outline/png/128/cube-outline.png",
+        "selectedIconPath": "./assets/eva-icons/fill/png/128/cube.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我",
+        "iconPath": "./assets/eva-icons/outline/png/128/person-outline.png",
+        "selectedIconPath": "./assets/eva-icons/fill/png/128/person.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "my-page": "../../components/my-page/index",
+    "author-photo": "../../components/author-photo/index",
+    "my-cells": "../../components/my-cells/index",
+    "my-cell": "../../components/my-cell/index",
+    "me-info-item": "../../components/me-info-item/index"
+  }
+}

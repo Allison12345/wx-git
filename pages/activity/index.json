@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-page": "../../components/my-page/index",
+    "activity-item": "../../components/activity-item/index"
+  }
+}

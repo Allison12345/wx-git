@@ -1,0 +1,11 @@
+.repo-item {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+.repo-item__bd {
+  margin: 5px 0;
+}
+.ft-span {
+  margin-right: 30px;
+}

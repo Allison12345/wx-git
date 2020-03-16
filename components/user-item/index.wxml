@@ -1,0 +1,13 @@
+<view class="user-item">
+  <view class="user-item__left">
+    <author-photo img="{{ img }}"></author-photo>
+  </view>
+  <view class="user-item__right">
+    <view class="user-item__right-hd">{{ author }}</view>
+    <view class="user-item__right-bd">
+      <eva-icon name="book-outline"></eva-icon>
+      <span>{{ name }}</span>
+    </view>
+    <view class="user-item__right-ft">{{ desc }}</view>
+  </view>
+</view>

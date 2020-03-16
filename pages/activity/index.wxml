@@ -1,0 +1,10 @@
+<my-page>
+  <activity-item
+    wx:for="{{ activityLists }}"
+    wx:key="index"
+    img="{{ item.img }}"
+    user="{{ item.user }}"
+    repo="{{ item.repo }}"
+    date="{{ item.date }}"
+  ></activity-item>
+</my-page>

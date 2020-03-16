@@ -1,0 +1,6 @@
+.activity-item {
+  display: flex;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #fff;
+}

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "eva-icon": "../eva-icon/index"
+  }
+}

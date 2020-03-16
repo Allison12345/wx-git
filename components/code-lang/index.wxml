@@ -1,0 +1,4 @@
+<view>
+  <eva-icon name="radio-button-on" wx:style="color: {{ cptStyle }}"></eva-icon>
+  <span>{{ code }}</span>
+</view>

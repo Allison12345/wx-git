@@ -1,0 +1,24 @@
+<view class="repo-item">
+  <view class="repo-item__hd">
+    <eva-icon name="book-outline"></eva-icon>
+    {{ author }}/{{ name }}
+  </view>
+  <view class="repo-item__bd">{{ desc }}</view>
+  <view class="repo-item__ft">
+    <view class="repo-item__ft-up">
+      <code-lang color="{{ langColor }}" code="{{ lang }}"></code-lang>
+      <span>
+        <eva-icon type="fill" name="star"></eva-icon>
+        <span class="ft-span">{{ stars }}</span>
+      </span>
+      <span>
+        <eva-icon type="fill" name="shuffle-2"></eva-icon>
+        <span class="ft-span">{{ forks }}</span>
+      </span>
+    </view>
+    <view class="repo-item__ft-down">
+      <eva-icon class="txt-red" type="fill" name="star"></eva-icon>
+      <span class="txt-red">{{ todayStars }}</span>
+    </view>
+  </view>
+</view>

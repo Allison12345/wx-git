@@ -1,0 +1,11 @@
+.nav-item {
+  color: #333333;
+  padding: 10rpx;
+  width: 127.5px;
+}
+.nav-item__label {
+  width: 100%;
+}
+.isActive {
+  color: rgb(121, 119, 253);
+}

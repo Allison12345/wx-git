@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "author-photo": "../author-photo/index",
+    "eva-icon": "../eva-icon/index"
+  }
+}

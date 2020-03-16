@@ -1,0 +1,4 @@
+<view class="me-info-item">
+  <view>{{ number }}</view>
+  <view>{{ label }}</view>
+</view>

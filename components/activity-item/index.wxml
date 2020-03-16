@@ -1,0 +1,11 @@
+<view class="activity-item">
+  <view class="activity-item__left">
+    <author-photo></author-photo>
+  </view>
+  <view class="activity-item__right">
+    <view class="activity-item__right-top"
+      >{{ user }} {{ activity }} {{ repo }}</view
+    >
+    <view class="activity-item__right-bottom">{{ date }}</view>
+  </view>
+</view>
