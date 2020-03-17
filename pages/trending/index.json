@@ -4,6 +4,7 @@
     "eva-icon": "../../components/eva-icon/index",
     "nav-bar-item": "../../components/nav-bar-item/index",
     "repo-item": "../../components/repo-item/index",
-    "user-item": "../../components/user-item/index"
+    "user-item": "../../components/user-item/index",
+    "my-picker": "../../components/my-picker/index"
   }
 }

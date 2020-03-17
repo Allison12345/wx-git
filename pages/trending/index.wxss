@@ -17,3 +17,18 @@
 .trending {
   padding-top: 42px;
 }
+.ft {
+  position: fixed;
+  background-color: rgb(76, 76, 245);
+  border-radius: 40px;
+  margin-top: 20px;
+  bottom: 80px;
+  left: 80px;
+  right: 80px;
+  opacity: 80%;
+  text-align: center;
+}
+.my-picker {
+  color: #fff;
+  padding: 3px 9px;
+}

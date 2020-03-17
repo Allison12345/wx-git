@@ -36,4 +36,13 @@
       desc="{{ item.desc }}"
     ></user-item>
   </view>
+  <view class="ft">
+    <my-picker
+      class="my-picker"
+      pickerList="{{ pickerList }}"
+      pickerIndex="{{ pickerIndex }}"
+      bind:onPickerChange="onPickerChange"
+    >
+    </my-picker
+  ></view>
 </my-page>

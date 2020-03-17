@@ -17,11 +17,20 @@ Page({
       author: 'Allison',
       name: 'vue-git',
       desc: 'kjdfhk'
-    }))
+    })),
+    pickerList: [
+      ['Today', 'Week', 'Month'],
+      ['All', 'HTML', 'JavaScript']
+    ],
+    pickerIndex: [1, 1]
   },
   myevent(e) {
     const index = e.detail
     this.setData({ activeIndex: index })
     console.log(this.data.activeIndex)
+  },
+  onPickerChange(e) {
+    console.log(e)
+    this.setData({ pickerIndex: e.detail.value })
   }
 })

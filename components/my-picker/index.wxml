@@ -1,0 +1,10 @@
+<picker
+  mode="multiSelector"
+  value="{{ index }}"
+  range="{{ pickerList }}"
+  bindchange="onMultiPickerChange"
+>
+  <view class="picker">
+    {{ pickerList[0][pickerIndex[0]] }} , {{ pickerList[1][pickerIndex[1]] }}
+  </view>
+</picker>
