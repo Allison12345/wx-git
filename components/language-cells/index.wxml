@@ -1,0 +1,8 @@
+<view class="language-cells">
+  <view class="language-cells__hd">{{ word }}</view>
+  <language-cell
+    wx:for="{{ label }}"
+    wx:key="index"
+    label="{{ item }}"
+  ></language-cell>
+</view>

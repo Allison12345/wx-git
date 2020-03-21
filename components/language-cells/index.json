@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "language-cell": "./language-cell/index"
+  }
+}

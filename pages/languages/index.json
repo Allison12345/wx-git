@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-page": "../../components/my-page/index",
+    "language-cells": "../../components/language-cells/index"
+  }
+}

@@ -1,6 +1,10 @@
 <my-page>
   <view class="nav-bar flex-x-lc flex-1 bg-white">
-    <eva-icon class="eva-1" name="options-2-outline"></eva-icon>
+    <eva-icon
+      class="eva-1"
+      name="options-2-outline"
+      bindtap="onLanguageTap"
+    ></eva-icon>
     <nav-bar-item
       class="txt-center"
       wx:for="{{ labelList }}"
@@ -39,6 +43,7 @@
   <view class="ft">
     <my-picker
       class="my-picker"
+      wx:if="{{ activeIndex === 0 }}"
       pickerList="{{ pickerList }}"
       pickerIndex="{{ pickerIndex }}"
       bind:onPickerChange="onPickerChange"

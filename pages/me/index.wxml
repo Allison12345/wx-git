@@ -1,5 +1,7 @@
 <my-page class="me">
-  <author-photo></author-photo>
+  <view class="txt-center">
+    <author-photo img="{{ info.img }}"></author-photo>
+  </view>
   <view class="txt-center">{{ info.name }}</view>
   <view class="txt-center">{{ info.additionalName }}</view>
   <my-cells>

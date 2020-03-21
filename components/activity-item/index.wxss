@@ -1,6 +1,9 @@
 .activity-item {
   display: flex;
   margin: 10px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   background: #fff;
+}
+.activity-item__left {
+  margin-right: 10px;
 }

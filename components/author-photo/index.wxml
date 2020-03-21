@@ -1,1 +1,1 @@
-<image class="author-photo" src="{{ img }}"></image>
+<image class="author-photo" src="{{ img }}" mode="aspectFill"></image>

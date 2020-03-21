@@ -1,0 +1,8 @@
+<my-page>
+  <language-cells
+    wx:for="{{ laguagesItems }}"
+    wx:key="index"
+    label="{{ item.label }}"
+    word="{{ item.word }}"
+  ></language-cells>
+</my-page>

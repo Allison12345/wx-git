@@ -1,5 +1,10 @@
 {
-  "pages": ["pages/trending/index", "pages/activity/index", "pages/me/index"],
+  "pages": [
+    "pages/trending/index",
+    "pages/activity/index",
+    "pages/me/index",
+    "pages/languages/index"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

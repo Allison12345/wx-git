@@ -7,7 +7,8 @@ Page({
       follwing: '21',
       email: 'abc@xyz.com',
       blog: 'https://alison.github.io',
-      img: '',
+      img:
+        'https://6d79-mywxapp-q4z0b-1301425530.tcb.qcloud.la/C61D75E3-88C4-4182-B6E9-3EF575BC7D67.jpeg?sign=8566a6e0dae7ada7d63c96ef1090bc12&t=1584770809',
       name: 'allison',
       additionalName: 'allison12345'
     },

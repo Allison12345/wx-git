@@ -1,6 +1,6 @@
 <view class="activity-item">
   <view class="activity-item__left">
-    <author-photo></author-photo>
+    <author-photo img="{{ img }}"></author-photo>
   </view>
   <view class="activity-item__right">
     <view class="activity-item__right-top"
