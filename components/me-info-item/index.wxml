@@ -1,4 +1,5 @@
-<view class="me-info-item">
+<view class="me-info-item ">
+  <view class="line" wx:if="{{index}}"></view>
   <view>{{ number }}</view>
   <view>{{ label }}</view>
 </view>

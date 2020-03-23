@@ -1,6 +1,7 @@
 Component({
   properties: {
     number: Number,
-    label: String
+    label: String,
+    index:Number
   }
 })
