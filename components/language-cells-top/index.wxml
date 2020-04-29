@@ -1,0 +1,14 @@
+<view class="laguages-cells-top">
+    <view class="laguages-cells-title">click to delete</view>
+    <view class="laguages-cells-content">
+        <view
+        class="laguages-cells-item"
+        wx:for="{{ chooseItems }}"
+        wx:key="*this"
+        data-index="{{index}}"
+        bindtap='onTap'
+        >{{ item }}</view
+      >
+    </view>
+ 
+</view>

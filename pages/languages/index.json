@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "my-page": "../../components/my-page/index",
-    "language-cells": "../../components/language-cells/index"
+    "language-cells": "../../components/language-cells/index",
+    "language-cells-top": "../../components/language-cells-top/index"
   }
 }

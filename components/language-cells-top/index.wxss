@@ -1,0 +1,19 @@
+.laguages-cells-top{
+ padding:5px;
+ width: 100%;
+}
+.laguages-cells-title{
+    padding: 5px;
+}
+.laguages-cells-content{
+    margin-right: 40px;
+}
+.laguages-cells-item{
+    margin-top: 10px;
+    margin-left: 6px;
+    padding: 0 10px;
+    text-align: center;
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 10px;
+}

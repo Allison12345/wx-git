@@ -3,6 +3,8 @@
   <language-cell
     wx:for="{{ label }}"
     wx:key="index"
+    index="{{ index }}"
     label="{{ item }}"
+    bind:onChoose="onChoose"
   ></language-cell>
 </view>

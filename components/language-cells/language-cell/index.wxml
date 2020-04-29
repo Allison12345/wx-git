@@ -1,3 +1,3 @@
-<view class="language-cell">
+<view class="language-cell" bindtap='onTap'>
   {{ label }}
 </view>
