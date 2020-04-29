@@ -1,0 +1,10 @@
+<view class="language-cells-side">
+  <view
+    class="language-cells-item"
+    wx:for="{{ wordItems }}"
+    wx:key="*this"
+    data-item="{{ item }}"
+    bindtap="onTap"
+    >{{ item }}</view
+  >
+</view>

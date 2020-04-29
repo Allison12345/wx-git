@@ -1,13 +1,17 @@
 <my-page>
-  <language-cells-top 
-    chooseItems='{{chooseItems}}'
-    bind:onDeleteItem='onDeleteItem'
+  <language-cells-top
+    chooseItems="{{ chooseItems }}"
+    bind:onDeleteItem="onDeleteItem"
   ></language-cells-top>
   <language-cells
     wx:for="{{ laguagesItems }}"
     wx:key="index"
     label="{{ item.label }}"
     word="{{ item.word }}"
-    bind:onChooseItem='onChooseItem'
+    bind:onChooseItem="onChooseItem"
   ></language-cells>
+  <language-cells-side
+    wordItems="{{ wordItems }}"
+    bind:moveToItem="moveToItem"
+  ></language-cells-side>
 </my-page>

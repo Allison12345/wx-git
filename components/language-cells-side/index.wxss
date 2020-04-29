@@ -1,0 +1,10 @@
+.language-cells-side{
+    top:16px;
+    right: 10px;
+    position: fixed;
+}
+.language-cells-item{
+    display: flex;
+    flex-direction: row;
+    color: rgb(68, 68, 247);
+}

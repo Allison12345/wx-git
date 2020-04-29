@@ -20,5 +20,8 @@ Page({
     const chooseItems = this.data.chooseItems
     chooseItems.splice(index.detail,1)
     this.setData({chooseItems})
+  },
+  moveToItem(item){
+    console.log(item.detail)
   }
 })
