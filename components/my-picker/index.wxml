@@ -5,6 +5,6 @@
   bindchange="onMultiPickerChange"
 >
   <view class="picker">
-    {{ pickerList[0][pickerIndex[0]] }} , {{ pickerList[1][pickerIndex[1]] }}
+    {{ pickerList[0][pickerIndex[0]] }} & {{ pickerList[1][pickerIndex[1]] }}
   </view>
 </picker>

@@ -1,4 +1,4 @@
-<my-page>
+<my-page class="my-page">
   <view class="nav-bar flex-x-lc flex-1 bg-white">
     <eva-icon
       class="eva-1"

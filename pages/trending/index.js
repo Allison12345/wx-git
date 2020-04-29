@@ -25,6 +25,17 @@ Page({
     ],
     pickerIndex: [1, 1]
   },
+  onLoad(){
+    wx.request({
+      url: '',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: res => {
+        console.log(res)
+      }
+    })
+  },
   onLanguageTap() {
     wx.navigateTo({ url: '/pages/languages/index' })
   },
