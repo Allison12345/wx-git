@@ -1,6 +1,7 @@
 .laguages-cells-top{
- padding:5px;
+ padding:6px;
  width: 100%;
+ border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .laguages-cells-title{
     padding: 5px;
@@ -9,8 +10,8 @@
     margin-right: 40px;
 }
 .laguages-cells-item{
-    margin-top: 10px;
     margin-left: 6px;
+    margin-bottom: 5px;
     padding: 0 10px;
     text-align: center;
     border: 1px solid black;
