@@ -1,31 +1,34 @@
 <my-page class="me">
-  <view class="txt-center">
-    <author-photo img="{{ info.img }}"></author-photo>
-  </view>
-  <view class="txt-center">{{ info.name }}</view>
-  <view class="txt-center">{{ info.additionalName }}</view>
-  <my-cells>
-    <view class="me-info__hd txt-center">{{ info.desc }}</view>
-    <view class="me-info__bd flex txt-center">
-      <me-info-item
-        class="flex-1"
-        wx:for="{{ infoItems }}"
-        wx:key="index"
-        index='{{index}}'
-        number="{{ item.number }}"
-        label="{{ item.label }}"
-      ></me-info-item>
+  <view wx:if='{{token}}'>
+    <view class="txt-center">
+      <author-photo img="{{ info.img }}"></author-photo>
     </view>
-  </my-cells>
-  <my-cells wx:for="{{ items }}" wx:key="index">
-    <my-cell
-      wx:for="{{ item }}"
-      wx:key="index"
-      hd="{{ item.label }}"
-      ft="{{ item.key ? info[item.key] || '--' : '' }}"
-      isLink="{{ item.isLink }}"
-      path="{{ item.path }}"
-      bindtap="onRouteTap"
-    ></my-cell>
-  </my-cells>
+    <view class="txt-center">{{ info.name }}</view>
+    <view class="txt-center">{{ info.additionalName }}</view>
+    <my-cells>
+      <view class="me-info__hd txt-center">{{ info.desc }}</view>
+      <view class="me-info__bd flex txt-center">
+        <me-info-item
+          class="flex-1"
+          wx:for="{{ infoItems }}"
+          wx:key="index"
+          index="{{ index }}"
+          number="{{ item.number }}"
+          label="{{ item.label }}"
+        ></me-info-item>
+      </view>
+    </my-cells>
+    <my-cells wx:for="{{ items }}" wx:key="index">
+      <my-cell
+        wx:for="{{ item }}"
+        wx:key="index"
+        hd="{{ item.label }}"
+        ft="{{ item.key ? info[item.key] || '--' : '' }}"
+        isLink="{{ item.isLink }}"
+        path="{{ item.path }}"
+        bindtap="onRouteTap"
+      ></my-cell>
+    </my-cells>
+  </view>
+  <login-button wx:else></login-button>
 </my-page>

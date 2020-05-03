@@ -4,6 +4,7 @@
     "author-photo": "../../components/author-photo/index",
     "my-cells": "../../components/my-cells/index",
     "my-cell": "../../components/my-cell/index",
-    "me-info-item": "../../components/me-info-item/index"
+    "me-info-item": "../../components/me-info-item/index",
+    "login-button": "../../components/login-button/index"
   }
 }

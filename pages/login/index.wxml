@@ -1,0 +1,5 @@
+<my-page class="login">
+    <view>token</view>
+    <input bindinput='onInput' placeholder="please input token" value="{{token}}"/>
+    <button bindtap='onLoginTap'>Login</button>
+</my-page>

@@ -1,5 +1,8 @@
+const appInstance = getApp()
+
 Page({
   data: {
+    token: '',
     info: {
       desc: '前端小白',
       repos: '23',
@@ -37,6 +40,10 @@ Page({
         { label: '关于', isLink: true, path: '/about' }
       ]
     ]
+  },
+  onLoad() {
+    console.log(appInstance.globalData.token)
+    this.setData({ token: appInstance.globalData.token })
   },
   onRouteTap(path) {
     console.log(path)

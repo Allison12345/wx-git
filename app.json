@@ -3,7 +3,8 @@
     "pages/trending/index",
     "pages/activity/index",
     "pages/me/index",
-    "pages/languages/index"
+    "pages/languages/index",
+    "pages/login/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
