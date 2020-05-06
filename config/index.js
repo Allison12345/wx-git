@@ -1,5 +1,6 @@
 module.exports = {
     baseUrl: 'https://api.github.com',
     tokenKey: 'login_flag',
-    myToken: '080cff5916abc928a86a8871b8fc5dd9dd98b18b'
+    userKey: 'user_key',
+    myToken: '88b7cd819d858d44f17111534d2c1438bcad6a06'
 }

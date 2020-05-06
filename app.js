@@ -1,12 +1,15 @@
-const { tokenKey } = require('./config/index')
+const { tokenKey, userKey } = require('./config/index')
 
 App({
     onLaunch() {
         try {
-            const value = wx.getStorageSync(tokenKey) || ''
-            this.globalData.token = value
+            const tokenKeyValue = wx.getStorageSync(tokenKey) || ''
+            this.globalData.token = tokenKeyValue
+            const userKeyValue = wx.getStorageSync(userKey) || ''
+            this.userItems = userKeyValue
         } catch (e) {
         }
     },
-    globalData: { token: '' }
+    globalData: { token: '' },
+    userItems: ''
 })

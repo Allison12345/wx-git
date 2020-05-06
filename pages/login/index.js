@@ -1,7 +1,7 @@
-const { baseUrl, tokenKey } = require("../../config/index")
+const { baseUrl, tokenKey, userKey } = require("../../config/index")
 Page({
   data: {
-    token: ''
+    token: '',
   },
   onInput(e) {
     this.setData({ token: e.detail.value })
@@ -18,11 +18,13 @@ Page({
         },
         success: res => {
           if (res.statusCode === 200) {
-            console.log(res)
+            console.log(res, '1')
             const appInstance = getApp()
+            appInstance.userItems = res
             appInstance.globalData.token = token
             try {
               wx.setStorageSync(tokenKey, token)
+              wx.setStorageSync(userKey, res)
             } catch (e) { }
             wx.reLaunch({ url: "/pages/me/index" })
           }

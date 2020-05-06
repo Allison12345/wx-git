@@ -1,1 +1,10 @@
-<button bindtap='onTap'>登录</button>
+<!-- @format -->
+
+<view class="login">
+  <image
+    class="githup-image"
+    mode="aspectFit"
+    src="../../assets/githupLogo.png"
+  ></image>
+  <button class="login-button" bindtap="onTap">登录</button>
+</view>

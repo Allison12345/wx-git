@@ -42,8 +42,23 @@ Page({
     ]
   },
   onLoad() {
-    console.log(appInstance.globalData.token)
+    const { data } = appInstance.userItems
+    console.log(data, 'sdjhf')
+    this.getUserItems("https://api.github.com/users/Allison12345", this.data.token)
     this.setData({ token: appInstance.globalData.token })
+  },
+  getUserItems(userUrl, token) {
+    wx.request({
+      url: userUrl,
+      method: 'GET',
+      header: {
+        'content-type': 'application/json',
+        'Authorization': `token ${token}`
+      },
+      success: res => {
+        console.log(res, '22222')
+      }
+    })
   },
   onRouteTap(path) {
     console.log(path)

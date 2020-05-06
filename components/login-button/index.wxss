@@ -1,0 +1,17 @@
+.login{
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.githup-image{
+  height: 100px;
+  margin-top: 40%;
+  margin-bottom: 10px;
+}
+.login-button{
+  width: 50%;
+  margin: auto;
+  background-color: rgb(76, 76, 245);
+  color: #fff;
+}
