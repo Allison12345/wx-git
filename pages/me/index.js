@@ -56,7 +56,7 @@ Page({
         'Authorization': `token ${token}`
       },
       success: res => {
-        console.log(res, '22222')
+        //console.log(res, '22222')
       }
     })
   },

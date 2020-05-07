@@ -2,7 +2,9 @@
 
 <view class="login">
   <view class="login-img">
-    <githup-img img="../../assets/githupLogo.png"></githup-img>
+    <githup-img
+      img="https://6d79-mywxapp-q4z0b-1301425530.tcb.qcloud.la/wx-git/githupLogo.png?sign=0131e5661f7393864b31a0ca1e76015e&t=1588833586"
+    ></githup-img>
   </view>
-  <button class="login-button" bindtap="onTap">登录</button>
+  <login-tap bindtap="onTap"></login-tap>
 </view>

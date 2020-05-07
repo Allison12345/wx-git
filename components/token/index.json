@@ -1,7 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "githup-img": "../githup-img/index",
     "login-tap":"../login-tap/index"
   }
 }

@@ -1,0 +1,7 @@
+.login-tap{
+  background-color:rgb(45,141,241) ;
+  color: #fff;
+  padding: 0 15px;
+  border-radius: 80px;
+  width: 200px;
+}

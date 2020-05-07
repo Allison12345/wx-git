@@ -2,9 +2,12 @@ const { baseUrl, tokenKey, userKey } = require("../../config/index")
 Page({
   data: {
     token: '',
+    activeIndex: 0,
+    img: 'https://6d79-mywxapp-q4z0b-1301425530.tcb.qcloud.la/wx-git/githup.png?sign=81c8fc19a2bc5dc28bc501066088800e&t=1588833622'
   },
-  onInput(e) {
-    this.setData({ token: e.detail.value })
+  onTokenInput(e) {
+    console.log(e.detail, '2222222')
+    this.setData({ token: e.detail })
   },
   onLoginTap() {
     const { token } = this.data

@@ -1,0 +1,13 @@
+<!-- @format -->
+
+<view class="token">
+  <view class="token-bd">
+    <view>Token:</view>
+    <input
+      bindinput="onInput"
+      placeholder="   请输入token"
+      value="{{ token }}"
+    />
+  </view>
+  <login-tap class="login" bindtap="onLoginTap"></login-tap>
+</view>

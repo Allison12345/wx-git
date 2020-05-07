@@ -1,5 +1,17 @@
+<!-- @format -->
+
 <my-page class="login">
+  <view class="login-bg">
+    <view class="login-img">
+      <githup-img img="{{ img }}"></githup-img>
+    </view>
+  </view>
+  <view class="login-bd">
     <view>token</view>
-    <input bindinput='onInput' placeholder="please input token" value="{{token}}"/>
-    <button bindtap='onLoginTap'>Login</button>
+    <token
+      bind:onTokenInput="onTokenInput"
+      bind:onLoginTap="onLoginTap"
+      token="{{ token }}"
+    ></token>
+  </view>
 </my-page>
