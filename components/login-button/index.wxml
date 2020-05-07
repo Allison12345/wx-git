@@ -1,10 +1,8 @@
 <!-- @format -->
 
 <view class="login">
-  <image
-    class="githup-image"
-    mode="aspectFit"
-    src="../../assets/githupLogo.png"
-  ></image>
+  <view class="login-img">
+    <githup-img img="../../assets/githupLogo.png"></githup-img>
+  </view>
   <button class="login-button" bindtap="onTap">登录</button>
 </view>

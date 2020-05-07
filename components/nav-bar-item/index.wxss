@@ -7,5 +7,5 @@
   width: 100%;
 }
 .isActive {
-  color: rgb(121, 119, 253);
+  color: rgb(45,141,241);
 }
