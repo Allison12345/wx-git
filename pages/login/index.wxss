@@ -1,3 +1,6 @@
+.login{
+  position: relative;
+}
 .login-bg{
   background-color: rgb(45,141,241);
   width: 100%;
@@ -7,4 +10,43 @@
   height: 120px;
   z-index: 100;
   padding-top: 10%;
+}
+.login-bd{
+  position: absolute;
+  top: 150px;
+  left:50%;
+  transform: translate(-50%);
+  padding: 15px;
+  background-color: #fff;
+  z-index:5000;
+  border-radius: 5px;
+}
+.login-bd__hd{
+  display: flex;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.login-bd__hd-left{
+  flex: 1;
+}
+.true{
+  color: rgb(45,141,241);
+}
+.login-bd__hd-right{
+  flex: 1;
+}
+.info_view{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding-top: 70px;
+}
+.info_text{
+  color: #7f7f7f;
+  font-size: 14px;
+}
+.token_address{
+  color:  rgb(12, 123, 241);
+  font-size: 14px;
+  margin-top: 20px;
 }

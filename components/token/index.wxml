@@ -2,12 +2,15 @@
 
 <view class="token">
   <view class="token-bd">
-    <view>Token:</view>
+    <view class="token-bd__title">Token:</view>
     <input
       bindinput="onInput"
-      placeholder="   请输入token"
+      placeholder="   please input token"
+      placeholder-class="placeholder"
       value="{{ token }}"
     />
   </view>
-  <login-tap class="login" bindtap="onLoginTap"></login-tap>
+  <view class="login">
+    <login-tap bindtap="onLoginTap"></login-tap>
+  </view>
 </view>

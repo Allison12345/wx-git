@@ -7,11 +7,45 @@
     </view>
   </view>
   <view class="login-bd">
-    <view>token</view>
+    <view class="login-bd__hd">
+      <view
+        class="login-bd__hd-left {{ activeIndex === 1 }}"
+        bindtap="onloginWayChange"
+        >Token</view
+      >
+      <view
+        class="login-bd__hd-right {{ activeIndex === 0 }}"
+        bindtap="onloginWayChange"
+        >Account</view
+      >
+    </view>
     <token
+      wx:if="{{ activeIndex === 1 }}"
       bind:onTokenInput="onTokenInput"
-      bind:onLoginTap="onLoginTap"
+      bind:onLoginTap="onTokenLoginTap"
       token="{{ token }}"
     ></token>
+    <account
+      wx:if="{{ activeIndex === 0 }}"
+      bind:onUserNameInput="onUserNameInput"
+      bind:onPassWordInput="onPassWordInput"
+      bind:onUserLoginTap="onUserLoginTap"
+      username="{{ username }}"
+      password="{{ password }}"
+    ></account>
+  </view>
+  <view class="info_view">
+    <text class="info_text">
+      1、由于小程序的限制，无法使用OAuth跳转认证，推荐使用Token认证方式；
+    </text>
+    <text class="info_text">
+      2、Token及用户名密码仅用于GitHub Api权限校验，不会被上传服务器；
+    </text>
+    <text class="info_text">
+      3、Token的生成方式请点击复制以下地址至浏览器打开，按照步骤即可生成Token
+    </text>
+    <view bindtap="onClickTap" class="token_address">
+      https://github.com/settings/tokens/new
+    </view>
   </view>
 </my-page>

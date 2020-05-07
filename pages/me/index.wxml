@@ -1,5 +1,7 @@
+<!-- @format -->
+
 <my-page class="me">
-  <view wx:if='{{token}}'>
+  <view wx:if="{{ token }}">
     <view class="txt-center">
       <author-photo img="{{ info.img }}"></author-photo>
     </view>
@@ -30,5 +32,5 @@
       ></my-cell>
     </my-cells>
   </view>
-  <login-button wx:else></login-button>
+  <login-button class="login-button" wx:else></login-button>
 </my-page>

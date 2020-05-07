@@ -1,20 +1,25 @@
 <!-- @format -->
 
 <view class="acconut">
-  <view class="token-bd">
-    <view>Token:</view>
+  <view class="acconut-bd">
+    <view class="acconut-bd__title">acconut:</view>
     <input
-      bindinput="onInput"
-      placeholder="   请输入用户名"
-      value="{{ token }}"
+      bindinput="onUserNameInput"
+      placeholder="   please input username"
+      placeholder-class="placeholder"
+      value="{{ username }}"
     />
   </view>
-  <view class="token-bd">
+  <view class="acconut-bd">
+    <view class="acconut-bd__title">password:</view>
     <input
-      bindinput="onInput"
-      placeholder="   请输入密码"
-      value="{{ token }}"
+      bindinput="onPassWordInput"
+      placeholder="   please input password"
+      placeholder-class="placeholder"
+      value="{{ password }}"
     />
   </view>
-  <login-tap bindtap="onLoginTap"></login-tap>
+  <view class="login">
+    <login-tap bindtap="onLoginTap"></login-tap>
+  </view>
 </view>
