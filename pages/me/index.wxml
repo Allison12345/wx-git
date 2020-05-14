@@ -5,21 +5,25 @@
     <view class="txt-center">
       <author-photo img="{{ info.img }}"></author-photo>
     </view>
-    <view class="txt-center">{{ info.name }}</view>
-    <view class="txt-center">{{ info.additionalName }}</view>
-    <my-cells>
-      <view class="me-info__hd txt-center">{{ info.desc }}</view>
-      <view class="me-info__bd flex txt-center">
-        <me-info-item
-          class="flex-1"
-          wx:for="{{ infoItems }}"
-          wx:key="index"
-          index="{{ index }}"
-          number="{{ item.number }}"
-          label="{{ item.label }}"
-        ></me-info-item>
-      </view>
-    </my-cells>
+    <view class="me-hd">
+      <view class="txt-center">{{ info.name }}</view>
+      <view class="txt-center">{{ info.additionalName }}</view>
+    </view>
+    <view class="me-bd">
+      <my-cells>
+        <view class="me-info__hd light-balck txt-center">{{ info.desc }}</view>
+        <view class="me-info__bd flex txt-center">
+          <me-info-item
+            class="flex-1"
+            wx:for="{{ infoItems }}"
+            wx:key="index"
+            index="{{ index }}"
+            number="{{ item.number }}"
+            label="{{ item.label }}"
+          ></me-info-item>
+        </view>
+      </my-cells>
+    </view>
     <my-cells wx:for="{{ items }}" wx:key="index">
       <my-cell
         wx:for="{{ item }}"

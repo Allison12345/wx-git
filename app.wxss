@@ -64,3 +64,6 @@ page {
 .bg-white {
   background-color: #fff;
 }
+.light-balck{
+  color: rgba(0, 0, 0, 0.5);
+}

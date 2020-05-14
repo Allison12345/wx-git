@@ -9,3 +9,7 @@
   width: 1px;
   background-color: #ededed;
 }
+.label{
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
