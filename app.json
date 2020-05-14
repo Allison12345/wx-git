@@ -4,7 +4,8 @@
     "pages/activity/index",
     "pages/me/index",
     "pages/languages/index",
-    "pages/login/index"
+    "pages/login/index",
+    "pages/search/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

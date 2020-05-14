@@ -1,0 +1,10 @@
+.cell-item{
+  margin-left: 6px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  text-align: center;
+  border: 1px solid rgb(45,141,241);
+  color: rgb(45,141,241);
+  display: inline-block;
+  border-radius: 10px;
+}

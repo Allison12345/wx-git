@@ -25,10 +25,13 @@ Page({
     ],
     pickerIndex: [1, 1]
   },
-  onLoad(){
+  onLoad() {
   },
   onLanguageTap() {
     wx.navigateTo({ url: '/pages/languages/index' })
+  },
+  onSearchTap() {
+    wx.navigateTo({ url: '/pages/search/index' })
   },
   myevent(e) {
     const index = e.detail

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-page": "../../components/my-page/index",
+    "search-input": "../../components/search-input/index",
+    "cell-item": "../../components/cell-item/index"
+  }
+}

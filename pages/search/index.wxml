@@ -1,0 +1,19 @@
+<!-- @format -->
+
+<my-page class="search">
+  <search-input
+    bind:onSearchContentChange="onSearchContentChange"
+  ></search-input>
+  <view class="search-bd">
+    <cell-item
+      chooseItems="{{ searchList }}"
+      bind:onChoose="onChoose"
+    ></cell-item>
+  </view>
+  <view
+    wx:if="{{ searchList.length >= 1 }}"
+    class="search-ft"
+    bindtap="onClearAll"
+    >Clear All</view
+  >
+</my-page>

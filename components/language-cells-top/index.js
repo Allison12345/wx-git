@@ -1,11 +1,11 @@
 Component({
   properties: {
-    chooseItems:Array
+    chooseItems: Array
   },
   methods: {
-    onTap(e){
-      const {index} = e.currentTarget.dataset
-      this.triggerEvent('onDeleteItem',index)
+    onChoose(e) {
+      const index = e.detail
+      this.triggerEvent('onDeleteItem', index)
     }
   }
 })

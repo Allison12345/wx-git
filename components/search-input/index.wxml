@@ -1,0 +1,19 @@
+<view class="search-input">
+  <view class="outside">
+    <view class="search__box">
+      <view class="search__icon">
+        <image class="search-outline" src='{{img}}' />
+      </view>
+      <view class="search__content">
+        <input
+          placeholder=" Search what you want"
+          type="text"
+          value="{{searchContent}}"
+          confirm-type="search"
+          bindconfirm='onComfirm'
+        />
+      </view>
+    </view>
+  </view>
+  <view class="search__cancel" bindtap='onCancel'>取消</view>
+</view>

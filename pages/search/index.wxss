@@ -1,0 +1,8 @@
+.search-bd{
+  padding: 20px 10px;
+}
+.search-ft{
+  padding-top: 30px;
+  color: rgb(45,141,241);
+  text-align: center;
+}

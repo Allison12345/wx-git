@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <my-page class="my-page">
   <view class="nav-bar flex-x-lc flex-1 bg-white">
     <eva-icon
@@ -14,7 +16,11 @@
       index="{{ index }}"
       bind:myevent="myevent"
     ></nav-bar-item>
-    <eva-icon class="eva-2" name="search-outline"></eva-icon>
+    <eva-icon
+      class="eva-2"
+      name="search-outline"
+      bindtap="onSearchTap"
+    ></eva-icon>
   </view>
   <view class="trending">
     <repo-item

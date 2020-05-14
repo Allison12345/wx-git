@@ -1,0 +1,10 @@
+<!-- @format -->
+
+<view
+  class="cell-item"
+  wx:for="{{ chooseItems }}"
+  wx:key="*this"
+  data-index="{{ index }}"
+  bindtap="onTap"
+  >{{ item }}</view
+>
