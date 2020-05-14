@@ -1,4 +1,6 @@
-<my-page>
+<!-- @format -->
+
+<my-page ref="page">
   <language-cells-top
     chooseItems="{{ chooseItems }}"
     bind:onDeleteItem="onDeleteItem"
@@ -9,6 +11,7 @@
     label="{{ item.label }}"
     word="{{ item.word }}"
     bind:onChooseItem="onChooseItem"
+    id="{{ item.word }}"
   ></language-cells>
   <language-cells-side
     wordItems="{{ wordItems }}"
