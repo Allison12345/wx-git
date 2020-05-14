@@ -25,16 +25,25 @@ Page({
   moveToItem(item) {
     const word = item.detail
     this.activeWord = word
-    wx.pageScrollTo({
-      scrollTop: 0,
-      duration: 300,
-      selector: `#${word}`,
-      success: res => {
-        console.log(res)
-      },
-      fail: res => {
-        console.log(res, fail)
-      }
-    })
+    this.getRect(word)
+  },
+  getRect(word) {
+    wx.createSelectorQuery().select("#top").scrollOffset(function (rect1) {
+      const topdist = rect1.scrollTop
+      wx.createSelectorQuery().select(`#${word}`).boundingClientRect(function (rect2) {
+        const dist = rect2.top - topdist
+        console.log(topdist, dist, rect1, rect2)
+        wx.pageScrollTo({
+          scrollTop: dist,
+          duration: 300,
+          success: res => {
+            console.log(res)
+          },
+          fail: res => {
+            console.log(res, fail)
+          }
+        })
+      }).exec()
+    }).exec()
   }
 })

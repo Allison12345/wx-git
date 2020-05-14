@@ -1,6 +1,6 @@
 <!-- @format -->
-
-<my-page ref="page">
+<view>
+  <view class="top" id="top"></view>
   <language-cells-top
     chooseItems="{{ chooseItems }}"
     bind:onDeleteItem="onDeleteItem"
@@ -17,4 +17,4 @@
     wordItems="{{ wordItems }}"
     bind:moveToItem="moveToItem"
   ></language-cells-side>
-</my-page>
+</view>
