@@ -29,8 +29,10 @@ Page({
   onLoad() {
     const { data } = appInstance.userItems || {}
     console.log(data, 'sdjhf')
+    console.log(appInstance.myInfoItems)
     this.getUserItems("https://api.github.com/users/Allison12345", this.data.token)
-    this.setData({ token: appInstance.globalData.token, info: appInstance.myInfo, infoItems: appInstance.myInfoItems })
+    const { myInfo, myInfoItems } = appInstance
+    this.setData({ token: appInstance.globalData.token, info: { ...myInfo }, infoItems: [...myInfoItems] })
   },
   getUserItems(userUrl, token) {
     wx.request({

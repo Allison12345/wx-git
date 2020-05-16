@@ -1,6 +1,6 @@
 <!-- @format -->
 
-<view class="me-info-item">
+<view class="me-info-item" bindtap="onTap">
   <view class="line" wx:if="{{ index }}"></view>
   <view>{{ number }}</view>
   <view class="label">{{ label }}</view>

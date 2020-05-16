@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <view class="language-cells">
   <view class="language-cells__hd">{{ word }}</view>
   <language-cell
