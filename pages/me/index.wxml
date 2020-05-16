@@ -3,15 +3,15 @@
 <my-page class="me">
   <view wx:if="{{ token }}">
     <view class="txt-center">
-      <author-photo img="{{ info.img }}"></author-photo>
+      <author-photo img="{{ info.avatar_url }}"></author-photo>
     </view>
     <view class="me-hd">
       <view class="txt-center">{{ info.name }}</view>
-      <view class="txt-center">{{ info.additionalName }}</view>
+      <view class="txt-center">{{ info.login }}</view>
     </view>
     <view class="me-bd">
       <my-cells>
-        <view class="me-info__hd light-balck txt-center">{{ info.desc }}</view>
+        <view class="me-info__hd light-balck txt-center">{{ info.bio }}</view>
         <view class="me-info__bd flex txt-center">
           <me-info-item
             class="flex-1"

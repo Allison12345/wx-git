@@ -3,23 +3,8 @@ const appInstance = getApp()
 Page({
   data: {
     token: '',
-    info: {
-      desc: '前端小白',
-      repos: '23',
-      follwers: '435',
-      follwing: '21',
-      email: 'abc@xyz.com',
-      blog: 'https://alison.github.io',
-      img:
-        'https://6d79-mywxapp-q4z0b-1301425530.tcb.qcloud.la/C61D75E3-88C4-4182-B6E9-3EF575BC7D67.jpeg?sign=8566a6e0dae7ada7d63c96ef1090bc12&t=1584770809',
-      name: 'allison',
-      additionalName: 'allison12345'
-    },
-    infoItems: [
-      { number: 34, label: '仓库' },
-      { number: 2, label: '粉丝' },
-      { number: 43, label: '关注' }
-    ],
+    info: "",
+    infoItems: "",
     items: [
       [{ label: '关注 vue-git ♥️' }],
       [
@@ -42,10 +27,10 @@ Page({
     ]
   },
   onLoad() {
-    const { data } = appInstance.userItems
+    const { data } = appInstance.userItems || {}
     console.log(data, 'sdjhf')
     this.getUserItems("https://api.github.com/users/Allison12345", this.data.token)
-    this.setData({ token: appInstance.globalData.token })
+    this.setData({ token: appInstance.globalData.token, info: appInstance.myInfo, infoItems: appInstance.myInfoItems })
   },
   getUserItems(userUrl, token) {
     wx.request({
