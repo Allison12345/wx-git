@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "eva-icon": "../eva-icon/index"
+    "eva-icon": "../eva-icon/index",
+    "small-eva-desc": "../small-eva-desc/index"
   }
 }

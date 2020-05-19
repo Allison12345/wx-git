@@ -13,7 +13,7 @@ Component({
       if (itemIndex !== 0) {
         wx.navigateTo({ url: `/pages/follow/index?itemUrl=${itemUrl}` });
       } else {
-        wx.navigateTo({ url: `=${itemUrl}` });
+        wx.navigateTo({ url: `/pages/repo/index?itemUrl=${itemUrl}` });
       }
     },
   },

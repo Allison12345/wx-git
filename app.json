@@ -6,7 +6,8 @@
     "pages/languages/index",
     "pages/login/index",
     "pages/search/index",
-    "pages/follow/index"
+    "pages/follow/index",
+    "pages/repo/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

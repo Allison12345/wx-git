@@ -28,7 +28,7 @@
       wx:if="{{ activeIndex === 0 }}"
       wx:for="{{ repoLists }}"
       wx:key="index"
-      author="{{ item.author }}"
+      login="{{ item.author }}"
       name="{{ item.name }}"
       desc="{{ item.desc }}"
       langColor="{{ item.lang }}"

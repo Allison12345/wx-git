@@ -1,0 +1,6 @@
+.small-eva-desc{
+  display: flex;
+}
+.text{
+  padding-left: 5px;
+}

@@ -1,0 +1,13 @@
+<!-- @format -->
+
+<my-page>
+  <repo-item
+    wx:for="{{ repoItems }}"
+    wx:key="{{ index }}"
+    login="{{ item.owner.login }}"
+    name="{{ item.name }}"
+    desc="{{ item.description }}"
+    lang="{{ item.language }}"
+    update="{{ item.updated_at }}"
+  ></repo-item>
+</my-page>

@@ -1,9 +1,11 @@
+<!-- @format -->
+
 <view class="repo-item">
   <view class="repo-item__hd">
     <eva-icon name="book-outline"></eva-icon>
-    {{ author }}/{{ name }}
+    {{ login }}/{{ name }}
   </view>
-  <view class="repo-item__bd">{{ desc }}</view>
+  <view class="repo-item__bd">{{ desc }} </view>
   <view class="repo-item__ft">
     <view class="repo-item__ft-up">
       <code-lang color="{{ langColor }}" code="{{ lang }}"></code-lang>
@@ -17,8 +19,11 @@
       </span>
     </view>
     <view class="repo-item__ft-down">
-      <eva-icon class="txt-red" type="fill" name="star"></eva-icon>
-      <span class="txt-red">{{ todayStars }}</span>
+      <small-eva-desc
+        wx:if="{{ todayStars }}"
+        text="{{ todayStars }}"
+      ></small-eva-desc>
+      <small-eva-desc wx:if="{{ update }}" text="{{ update }}"></small-eva-desc>
     </view>
   </view>
 </view>
