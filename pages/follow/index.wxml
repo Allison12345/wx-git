@@ -1,0 +1,11 @@
+<!-- @format -->
+
+<my-page>
+  <follow-item
+    wx:for="{{ followItems }}"
+    wx:key="index"
+    img="{{ item.avatar_url }}"
+    label="{{ item.login }}"
+  ></follow-item>
+  <view class="follow-bottom">- - NO More Data - -</view>
+</my-page>

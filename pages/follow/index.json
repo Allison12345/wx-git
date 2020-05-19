@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-page": "../../components/my-page/index",
+    "follow-item": "../../components/follow-item/index"
+  }
+}

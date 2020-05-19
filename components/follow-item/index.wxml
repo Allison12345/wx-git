@@ -1,0 +1,10 @@
+<!-- @format -->
+
+<view class="follow-item">
+  <view class="follow-item__left">
+    <author-photo img="{{ img }}"></author-photo>
+  </view>
+  <view class="follow-item__right"
+    ><view class="content">{{ label }}</view></view
+  >
+</view>

@@ -27,7 +27,9 @@ App({
         avatar_url,
         name,
         login,
+        repos_url,
         followers_url,
+        following_url,
       } = userKeyValue.data;
       this.myInfo = {
         bio,
@@ -38,9 +40,9 @@ App({
         login,
       };
       this.myInfoItems = [
-        { number: public_repos, label: "仓库" },
+        { number: public_repos, label: "仓库", url: repos_url },
         { number: followers, label: "粉丝", url: followers_url },
-        { number: following, label: "关注" },
+        { number: following, label: "关注", url: following_url },
       ];
     } catch (e) {}
   },

@@ -1,0 +1,17 @@
+.follow-item {
+  display: flex;
+  margin: 10px;
+  padding: 10px 10px;
+  background: #fff;
+}
+.follow-item__left {
+  margin-right: 10px;
+}
+.follow-item__right{
+ position: relative;
+}
+.content{
+position: absolute;
+top:50%;
+transform: translate(0,-50%);
+}

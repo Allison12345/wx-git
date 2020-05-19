@@ -1,25 +1,20 @@
-const appInstance = getApp()
-const { token } = appInstance.globalData
+/** @format */
 Component({
   properties: {
     number: Number,
     label: String,
     index: Number,
-    url: String
+    url: String,
   },
   methods: {
     onTap() {
-      wx.request({
-        url: this.properties.url,
-        method: 'GET',
-        header: {
-          'content-type': 'application/json',
-          'Authorization': `token ${token}`
-        },
-        success: res => {
-          console.log(res)
-        }
-      })
-    }
-  }
-})
+      const itemIndex = this.properties.index;
+      const itemUrl = this.properties.url;
+      if (itemIndex !== 0) {
+        wx.navigateTo({ url: `/pages/follow/index?itemUrl=${itemUrl}` });
+      } else {
+        wx.navigateTo({ url: `=${itemUrl}` });
+      }
+    },
+  },
+});
