@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "my-page": "../../components/my-page/index",
-    "follow-item": "../../components/follow-item/index"
+    "follow-item": "../../components/follow-item/index",
+    "page-bottom":"../../components/page-bottom/index"
   }
 }

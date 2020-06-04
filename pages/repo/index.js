@@ -20,22 +20,9 @@ Page({
         Authorization: `token ${token}`,
       },
       success: (res) => {
-        const repoUrl = res.data.url;
-        this.getRepoUrlData(repoUrl);
-      },
-    });
-  },
-  getRepoUrlData(repoUrl) {
-    wx.request({
-      url: repoUrl,
-      method: "GET",
-      header: {
-        "content-type": "application/json",
-        Authorization: `token ${token}`,
-      },
-      success: (res) => {
         this.setData({ repoItems: res.data });
       },
     });
   },
 });
+//264bdab38bd5b721f4a9724c8af9a70224b481e2

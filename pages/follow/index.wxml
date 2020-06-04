@@ -7,5 +7,5 @@
     img="{{ item.avatar_url }}"
     label="{{ item.login }}"
   ></follow-item>
-  <view class="follow-bottom">- - NO More Data - -</view>
+  <page-bottom></page-bottom>
 </my-page>

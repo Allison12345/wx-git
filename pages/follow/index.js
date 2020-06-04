@@ -8,11 +8,15 @@ Page({
   },
   onLoad: function (query) {
     const { itemUrl } = query;
-    this.getFollowData(itemUrl);
+    this.fixItemUrl(itemUrl);
   },
-  getFollowData(itemUrl) {
+  fixItemUrl(itemUrl) {
+    const newUrl = itemUrl.split("{/other_user}").join("");
+    this.getFollowData(newUrl);
+  },
+  getFollowData(newUrl) {
     wx.request({
-      url: itemUrl,
+      url: newUrl,
       method: "GET",
       header: {
         "content-type": "application/json",

@@ -1,0 +1,6 @@
+.page-bottom{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(0,0,0,0.5);
+}

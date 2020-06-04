@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "my-page": "../../components/my-page/index",
-    "repo-item": "../../components/repo-item/index"
+    "repo-item": "../../components/repo-item/index",
+    "page-bottom":"../../components/page-bottom/index"
   }
 }
