@@ -10,6 +10,7 @@ App({
   userItems: "",
   myInfo: "",
   myInfoItems: "",
+  publicRepoLits: "",
   initAppState() {
     try {
       const tokenKeyValue = wx.getStorageSync(tokenKey) || "";
@@ -44,6 +45,7 @@ App({
         { number: followers, label: "粉丝", url: followers_url },
         { number: following, label: "关注", url: following_url },
       ];
+      this.publicRepoLits = {};
     } catch (e) {}
   },
 });

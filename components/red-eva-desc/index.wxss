@@ -1,4 +1,4 @@
-.small-eva-desc{
+.red-eva-desc{
   display: flex;
 }
 .text{

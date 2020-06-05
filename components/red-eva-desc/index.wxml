@@ -1,0 +1,6 @@
+<!-- @format -->
+
+<view class="red-eva-desc">
+  <small-icon text="{{ text }}"></small-icon>
+  <view class="text">{{ text }} stars today</view></view
+>

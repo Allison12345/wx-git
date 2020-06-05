@@ -2,6 +2,9 @@
   "component": true,
   "usingComponents": {
     "eva-icon": "../eva-icon/index",
-    "small-eva-desc": "../small-eva-desc/index"
+    "red-eva-desc": "../red-eva-desc/index",
+    "code-lang": "../code-lang/index",
+    "fork-desc": "../fork-desc/index",
+    "grey-star-desc": "../grey-star-desc/index"
   }
 }

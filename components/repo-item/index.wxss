@@ -9,6 +9,9 @@
 .ft-span {
   margin-right: 30px;
 }
+.repo-item__ft-up{
+  display: flex;
+}
 .repo-item__ft-down{
   font-size: 14px;
   color: red;

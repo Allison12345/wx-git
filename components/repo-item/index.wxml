@@ -9,21 +9,15 @@
   <view class="repo-item__ft">
     <view class="repo-item__ft-up">
       <code-lang color="{{ langColor }}" code="{{ lang }}"></code-lang>
-      <span>
-        <eva-icon type="fill" name="star"></eva-icon>
-        <span class="ft-span">{{ stars }}</span>
-      </span>
-      <span>
-        <eva-icon type="fill" name="shuffle-2"></eva-icon>
-        <span class="ft-span">{{ forks }}</span>
-      </span>
+      <fork-desc fork="{{ fork }}"></fork-desc>
+      <grey-star-desc star="{{ star }}"></grey-star-desc>
     </view>
     <view class="repo-item__ft-down">
-      <small-eva-desc
+      <red-eva-desc
         wx:if="{{ todayStars }}"
         text="{{ todayStars }}"
-      ></small-eva-desc>
-      <small-eva-desc wx:if="{{ update }}" text="{{ update }}"></small-eva-desc>
+      ></red-eva-desc>
+      <red-eva-desc wx:if="{{ update }}" text="{{ update }}"></red-eva-desc>
     </view>
   </view>
 </view>

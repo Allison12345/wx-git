@@ -1,6 +1,0 @@
-<!-- @format -->
-
-<view class="small-eva-desc">
-  <small-icon text="{{ text }}"></small-icon>
-  <view class="text">{{ text }}</view></view
->

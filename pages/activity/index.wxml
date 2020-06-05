@@ -1,10 +1,36 @@
-<my-page>
-  <activity-item
-    wx:for="{{ activityLists }}"
-    wx:key="index"
-    img="{{ item.img }}"
-    user="{{ item.user }}"
-    repo="{{ item.repo }}"
-    date="{{ item.date }}"
-  ></activity-item>
+<!-- @format -->
+
+<my-page class="my-page">
+  <view class="nav-bar flex-x-sb bg-white">
+    <eva-icon
+      class="eva-1"
+      name="options-2-outline"
+      bindtap="onLanguageTap"
+    ></eva-icon>
+    <eva-icon
+      class="eva-2"
+      name="search-outline"
+      bindtap="onSearchTap"
+    ></eva-icon>
+  </view>
+  <view class="activity">
+    <activity-item
+      wx:for="{{ activityLists }}"
+      wx:key="index"
+      img="{{ item.img }}"
+      user="{{ item.user }}"
+      repo="{{ item.repo }}"
+      date="{{ item.date }}"
+    ></activity-item>
+  </view>
+  <view class="ft">
+    <my-picker
+      class="my-picker"
+      wx:if="{{ activeIndex === 0 }}"
+      pickerList="{{ pickerList }}"
+      pickerIndex="{{ pickerIndex }}"
+      bind:onPickerChange="onPickerChange"
+    >
+    </my-picker
+  ></view>
 </my-page>

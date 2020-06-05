@@ -1,4 +1,4 @@
-.code-lang{
+.grey-star-desc{
   display: flex;
 }
 .text{
