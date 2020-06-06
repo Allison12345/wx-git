@@ -26,7 +26,6 @@
   <view class="ft">
     <my-picker
       class="my-picker"
-      wx:if="{{ activeIndex === 0 }}"
       pickerList="{{ pickerList }}"
       pickerIndex="{{ pickerIndex }}"
       bind:onPickerChange="onPickerChange"
