@@ -1,7 +1,7 @@
 <!-- @format -->
 
 <my-page class="me">
-  <view wx:if="{{ token }}">
+  <view wx:if="{{ Authorization }}">
     <view class="txt-center">
       <author-photo img="{{ info.avatar_url }}"></author-photo>
     </view>

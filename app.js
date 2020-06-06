@@ -1,20 +1,20 @@
 /** @format */
 
-const { tokenKey, userKey } = require("./config/index");
+const { AuthorizationKey, userKey } = require("./config/index");
 
 App({
   onLaunch() {
     this.initAppState();
   },
-  globalData: { token: "" },
+  globalData: { Authorization: "" },
   userItems: "",
   myInfo: "",
   myInfoItems: "",
   publicRepoLits: "",
   initAppState() {
     try {
-      const tokenKeyValue = wx.getStorageSync(tokenKey) || "";
-      this.globalData.token = tokenKeyValue;
+      const AuthorizationKeyValue = wx.getStorageSync(AuthorizationKey) || "";
+      this.globalData.Authorization = AuthorizationKeyValue;
       console.log(userKeyValue);
       const userKeyValue = wx.getStorageSync(userKey) || "";
       this.userItems = userKeyValue;

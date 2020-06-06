@@ -1,7 +1,7 @@
 /** @format */
 
 const appInstance = getApp();
-const { token } = appInstance.globalData;
+const { Authorization } = appInstance.globalData;
 Page({
   data: {
     repoItems: [],
@@ -17,7 +17,7 @@ Page({
       method: "GET",
       header: {
         "content-type": "application/json",
-        Authorization: `token ${token}`,
+        Authorization,
       },
       success: (res) => {
         this.setData({ repoItems: res.data });

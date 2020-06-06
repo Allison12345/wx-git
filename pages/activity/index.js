@@ -1,9 +1,8 @@
 /** @format */
-
+const { baseUrl } = require("../../config/index");
 const appInstance = getApp();
 Page({
   data: {
-    token: "",
     labelList: ["仓库", "用户"],
     activityLists: new Array(14).fill(0).map(() => ({
       img:
@@ -30,29 +29,26 @@ Page({
     pickerIndex: [1, 1],
   },
   onLoad() {
-    const { public_repos } = appInstance.userItems || "";
-    this.setData({
-      token: appInstance.globalData.token,
-    });
-    this.getPublicRepoLits(public_repos, this.data.token);
+    this.getPublicRepoLits();
   },
-  getPublicRepoLits(public_repos, token) {
-    const githup_url = "https://github.com";
-    const language = "";
-    const since = "daily";
+  getPublicRepoLits() {
+    const per_page = 20;
+    const page = 1;
+    const { Authorization } = appInstance.globalData;
     wx.request({
-      url: `${githup_url}/events`,
-      data: { since },
+      url: `${baseUrl}/events`,
+      data: { per_page, page },
       method: "GET",
       header: {
         "content-type": "application/json",
-        Authorization: `token ${token}`,
+        Authorization,
       },
       success: (res) => {
-        console.log(res.data, token, "res");
+        console.log(res, "res");
       },
     });
   },
+  //${githup_url}/users/${appInstance.myInfo.login}/received_events
   onLanguageTap() {
     wx.navigateTo({ url: "/pages/languages/index" });
   },

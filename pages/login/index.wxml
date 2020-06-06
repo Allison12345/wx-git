@@ -22,14 +22,14 @@
     <token
       wx:if="{{ activeIndex === 1 }}"
       bind:onTokenInput="onTokenInput"
-      bind:onLoginTap="onTokenLoginTap"
+      bind:onLoginTap="onLoginTap"
       token="{{ token }}"
     ></token>
     <account
       wx:if="{{ activeIndex === 0 }}"
       bind:onUserNameInput="onUserNameInput"
       bind:onPassWordInput="onPassWordInput"
-      bind:onUserLoginTap="onUserLoginTap"
+      bind:onUserLoginTap="onLoginTap"
       username="{{ username }}"
       password="{{ password }}"
     ></account>

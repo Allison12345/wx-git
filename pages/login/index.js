@@ -1,6 +1,7 @@
 /** @format */
 
-const { baseUrl, tokenKey, userKey } = require("../../config/index");
+const { baseUrl, AuthorizationKey, userKey } = require("../../config/index");
+const { base64_encode } = require("./base64");
 Page({
   data: {
     token: "",
@@ -18,32 +19,35 @@ Page({
     }
   },
   onTokenInput(e) {
-    console.log(e.detail, "2222222");
     this.setData({ token: e.detail });
   },
   onUserNameInput(e) {
-    console.log(e.detail);
     this.setData({ username: e.detail });
   },
   onPassWordInput(e) {
-    console.log(e.detail);
     this.setData({ password: e.detail });
   },
-  onTokenLoginTap() {
-    const { token } = this.data;
-    if (token) {
+  onLoginTap() {
+    const { token, username, password, activeIndex } = this.data;
+    let Authorization = "";
+    if (activeIndex === 0) {
+      Authorization = "Basic " + base64_encode(username + ":" + password);
+    } else {
+      Authorization = `token ${token}`;
+    }
+    if (Authorization) {
       wx.request({
         url: `${baseUrl}/user`,
         method: "GET",
         header: {
           "content-type": "application/json",
-          Authorization: `token ${token}`,
+          Authorization,
         },
         success: (res) => {
           if (res.statusCode === 200) {
             console.log(res, "1");
             try {
-              wx.setStorageSync(tokenKey, token);
+              wx.setStorageSync(AuthorizationKey, Authorization);
               wx.setStorageSync(userKey, res);
             } catch (e) {}
             const appInstance = getApp();
@@ -58,11 +62,5 @@ Page({
     } else {
       wx.showToast({ title: "请输入token", icon: "none" });
     }
-  },
-  onUserLoginTap(e) {
-    console.log(e, "skdu");
-  },
-  onClickTap() {
-    window.open();
   },
 });

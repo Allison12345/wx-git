@@ -1,10 +1,10 @@
 /** @format */
-
+const { baseUrl } = require("../../config/index");
 const appInstance = getApp();
 
 Page({
   data: {
-    token: "",
+    Authorization: "",
     info: "",
     infoItems: "",
     items: [
@@ -31,24 +31,21 @@ Page({
   onLoad() {
     const { data } = appInstance.userItems || {};
     console.log(data, "sdjhf");
-    this.getUserItems(
-      "https://api.github.com/users/Allison12345",
-      this.data.token
-    );
     const { myInfo, myInfoItems } = appInstance;
+    this.getUserItems(myInfo.login);
     this.setData({
-      token: appInstance.globalData.token,
+      Authorization: appInstance.globalData.Authorization,
       info: { ...myInfo },
       infoItems: [...myInfoItems],
     });
   },
-  getUserItems(userUrl, token) {
+  getUserItems(username) {
     wx.request({
-      url: userUrl,
+      url: `${baseUrl}/users/${username}`,
       method: "GET",
       header: {
         "content-type": "application/json",
-        Authorization: `token ${token}`,
+        Authorization: appInstance.globalData.Authorization,
       },
       success: (res) => {},
     });

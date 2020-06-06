@@ -16,6 +16,7 @@
       bindinput="onPassWordInput"
       placeholder="   please input password"
       placeholder-class="placeholder"
+      type="password"
       value="{{ password }}"
     />
   </view>

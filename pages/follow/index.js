@@ -1,7 +1,7 @@
 /** @format */
 
 const appInstance = getApp();
-const { token } = appInstance.globalData;
+const { Authorization } = appInstance.globalData;
 Page({
   data: {
     followItems: [],
@@ -11,7 +11,7 @@ Page({
     this.fixItemUrl(itemUrl);
   },
   fixItemUrl(itemUrl) {
-    const newUrl = itemUrl.split("{/other_user}").join("");
+    const newUrl = itemUrl.replace("{/other_user}", "");
     this.getFollowData(newUrl);
   },
   getFollowData(newUrl) {
@@ -20,7 +20,7 @@ Page({
       method: "GET",
       header: {
         "content-type": "application/json",
-        Authorization: `token ${token}`,
+        Authorization,
       },
       success: (res) => {
         this.setData({ followItems: res.data });
