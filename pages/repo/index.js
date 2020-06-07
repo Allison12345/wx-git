@@ -4,25 +4,15 @@ const appInstance = getApp();
 const { Authorization } = appInstance.globalData;
 Page({
   data: {
-    repoItems: [],
+    repoInfoItems: "",
+    repoItems: "",
   },
-  onLoad: function (query) {
-    const { itemUrl } = query;
-    console.log(itemUrl);
-    this.getRepoData(itemUrl);
-  },
-  getRepoData(itemUrl) {
-    wx.request({
-      url: itemUrl,
-      method: "GET",
-      header: {
-        "content-type": "application/json",
-        Authorization,
-      },
-      success: (res) => {
-        this.setData({ repoItems: res.data });
-      },
+  onLoad: function () {
+    const { repoInfoItems, repoItems } = appInstance;
+    this.setData({
+      repoInfoItems: [...repoInfoItems],
+      repoItems: [...repoItems],
     });
+    console.log(repoInfoItems);
   },
 });
-//264bdab38bd5b721f4a9724c8af9a70224b481e2

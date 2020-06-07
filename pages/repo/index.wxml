@@ -1,14 +1,28 @@
 <!-- @format -->
 
 <my-page>
-  <repo-item
-    wx:for="{{ repoItems }}"
-    wx:key="index"
-    login="{{ item.owner.login }}"
-    name="{{ item.name }}"
-    desc="{{ item.description }}"
-    lang="{{ item.language }}"
-    update="{{ item.updated_at }}"
-  ></repo-item>
-  <page-bottom></page-bottom>
+  <view class="repo-bd">
+    <my-cells>
+      <me-info-item
+        class="flex-1"
+        wx:for="{{ repoInfoItems }}"
+        wx:key="index"
+        index="{{ index }}"
+        number="{{ item.number }}"
+        label="{{ item.label }}"
+        url="{{ item.url }}"
+      ></me-info-item>
+    </my-cells>
+  </view>
+  <my-cells wx:for="{{ repoItems }}" wx:key="index">
+    <my-cell
+      wx:for="{{ item }}"
+      wx:key="index"
+      hd="{{ item.label }}"
+      ft="{{ item.key ? info[item.key] || '--' : '' }}"
+      isLink="{{ item.isLink }}"
+      path="{{ item.path }}"
+      bindtap="onRouteTap"
+    ></my-cell>
+  </my-cells>
 </my-page>

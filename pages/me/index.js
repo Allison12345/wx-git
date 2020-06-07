@@ -6,7 +6,7 @@ Page({
   data: {
     Authorization: "",
     info: "",
-    infoItems: "",
+    InfoItems: "",
     items: [
       [{ label: "关注 vue-git ♥️" }],
       [
@@ -31,13 +31,14 @@ Page({
   onLoad() {
     const { data } = appInstance.userItems || {};
     console.log(data, "sdjhf");
-    const { myInfo, myInfoItems } = appInstance;
+    const { myInfo, meInfoItems } = appInstance;
     this.getUserItems(myInfo.login);
     this.setData({
       Authorization: appInstance.globalData.Authorization,
       info: { ...myInfo },
-      infoItems: [...myInfoItems],
+      InfoItems: [...meInfoItems],
     });
+    console.log(this.data.InfoItems, "111111");
   },
   getUserItems(username) {
     wx.request({
@@ -50,7 +51,5 @@ Page({
       success: (res) => {},
     });
   },
-  onRouteTap(path) {
-    console.log(path);
-  },
+  onRouteTap(path) {},
 });

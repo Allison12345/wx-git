@@ -2,28 +2,30 @@
 
 <my-page class="me">
   <view wx:if="{{ Authorization }}">
-    <view class="txt-center">
-      <author-photo img="{{ info.avatar_url }}"></author-photo>
-    </view>
-    <view class="me-hd">
-      <view class="txt-center">{{ info.name }}</view>
-      <view class="txt-center">{{ info.login }}</view>
-    </view>
-    <view class="me-bd">
-      <my-cells>
-        <view class="me-info__hd light-balck txt-center">{{ info.bio }}</view>
-        <view class="me-info__bd flex txt-center">
-          <me-info-item
-            class="flex-1"
-            wx:for="{{ infoItems }}"
-            wx:key="index"
-            index="{{ index }}"
-            number="{{ item.number }}"
-            label="{{ item.label }}"
-            url="{{ item.url }}"
-          ></me-info-item>
-        </view>
-      </my-cells>
+    <view class="me-top">
+      <view class="txt-center">
+        <author-photo img="{{ info.avatar_url }}"></author-photo>
+      </view>
+      <view class="me-hd">
+        <view class="txt-center">{{ info.name }}</view>
+        <view class="txt-center">{{ info.login }}</view>
+      </view>
+      <view class="me-bd">
+        <my-cells>
+          <view class="me-info__hd light-balck txt-center">{{ info.bio }}</view>
+          <view class="me-info__bd flex txt-center">
+            <me-info-item
+              class="flex-1"
+              wx:for="{{ InfoItems }}"
+              wx:key="index"
+              index="{{ index }}"
+              number="{{ item.number }}"
+              label="{{ item.label }}"
+              url="{{ item.url }}"
+            ></me-info-item>
+          </view>
+        </my-cells>
+      </view>
     </view>
     <my-cells wx:for="{{ items }}" wx:key="index">
       <my-cell
