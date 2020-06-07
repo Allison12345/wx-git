@@ -1,6 +1,10 @@
 /** @format */
 
-const { AuthorizationKey, userKey } = require("./config/index");
+const {
+  AuthorizationKey,
+  userKey,
+  activityListsKey,
+} = require("./config/index");
 
 App({
   onLaunch() {
@@ -10,7 +14,7 @@ App({
   userItems: "",
   myInfo: "",
   myInfoItems: "",
-  publicRepoLits: "",
+  activityLists: "",
   initAppState() {
     try {
       const AuthorizationKeyValue = wx.getStorageSync(AuthorizationKey) || "";
@@ -18,6 +22,9 @@ App({
       console.log(userKeyValue);
       const userKeyValue = wx.getStorageSync(userKey) || "";
       this.userItems = userKeyValue;
+      const activityListsValue = wx.getStorageSync(activityListsKey) || "";
+      this.activityLists = activityListsValue.data;
+      console.log(activityListsValue, "adjf");
       const {
         bio,
         public_repos,
@@ -45,7 +52,6 @@ App({
         { number: followers, label: "粉丝", url: followers_url },
         { number: following, label: "关注", url: following_url },
       ];
-      this.publicRepoLits = {};
     } catch (e) {}
   },
 });

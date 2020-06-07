@@ -7,3 +7,10 @@
 .activity-item__left {
   margin-right: 10px;
 }
+.activity-item__right{
+  font-size: 14px;
+}
+.activity-item__right-bottom{
+  display: flex;
+  margin-top: 5px;
+}

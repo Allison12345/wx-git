@@ -1,11 +1,19 @@
+<!-- @format -->
+
 <view class="activity-item">
   <view class="activity-item__left">
     <author-photo img="{{ img }}"></author-photo>
   </view>
   <view class="activity-item__right">
-    <view class="activity-item__right-top"
-      >{{ user }} {{ activity }} {{ repo }}</view
+    <view class="activity-item__right-top" bindtap="onRepoTap"
+      >{{ user }} {{ repo }}</view
     >
-    <view class="activity-item__right-bottom">{{ date }}</view>
+    <view wx:if="{{ description }}" class="activity-item__right-middle">{{
+      description
+    }}</view>
+    <view class="activity-item__right-bottom"
+      ><code-lang wx:if="{{ language }}" code="{{ language }}"></code-lang>
+      <fork-desc fork="{{ forks }}"></fork-desc>
+    </view>
   </view>
 </view>

@@ -1,9 +1,12 @@
 <!-- @format -->
 
 <view class="code-lang">
-  <image
-    class="img"
-    src="https://6d79-mywxapp-q4z0b-1301425530.tcb.qcloud.la/wx-git/language-icon.png?sign=03eeb5527187d088c93cf15e71870b68&t=1591266435"
-  ></image>
+  <view class="outside">
+    <image
+      class="img"
+      src="https://6d79-mywxapp-q4z0b-1301425530.tcb.qcloud.la/wx-git/language-icon.png?sign=03eeb5527187d088c93cf15e71870b68&t=1591266435"
+    ></image
+  ></view>
+
   <view class="text">{{ code }}</view></view
 >

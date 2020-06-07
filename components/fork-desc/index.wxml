@@ -1,6 +1,7 @@
 <!-- @format -->
 
 <view class="fork-desc">
+  <view class="outside"></view>
   <image
     class="img"
     src="https://6d79-mywxapp-q4z0b-1301425530.tcb.qcloud.la/wx-git/fork.png?sign=0b79f89b8b41d8c55b815fb8456aee9d&t=1591266089"

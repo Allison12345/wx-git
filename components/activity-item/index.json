@@ -1,6 +1,8 @@
 {
   "component": true,
   "usingComponents": {
-    "author-photo": "../author-photo/index"
+    "author-photo": "../author-photo/index",
+    "code-lang": "../code-lang/index",
+    "fork-desc": "../fork-desc/index"
   }
 }
