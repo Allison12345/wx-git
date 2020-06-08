@@ -1,8 +1,14 @@
 <!-- @format -->
 
 <my-page>
-  <view class="repo-bd">
-    <my-cells>
+  <view class="repo-top">
+    <view class="repo-hd">
+      <view class="txt-center font-xl">{{ name }}</view>
+      <view wx:if="{{ repoHdInfo.description }}" class="txt-center font-l">{{
+        description
+      }}</view>
+    </view>
+    <view class="repo-bd">
       <me-info-item
         class="flex-1"
         wx:for="{{ repoInfoItems }}"
@@ -12,7 +18,7 @@
         label="{{ item.label }}"
         url="{{ item.url }}"
       ></me-info-item>
-    </my-cells>
+    </view>
   </view>
   <my-cells wx:for="{{ repoItems }}" wx:key="index">
     <my-cell

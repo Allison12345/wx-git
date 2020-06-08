@@ -1,5 +1,4 @@
 /** @format */
-const { repoListsKey } = require("../../config/index");
 const appInstance = getApp();
 Component({
   properties: {
@@ -31,20 +30,20 @@ Component({
         },
         success: (res) => {
           if (res.statusCode === 200) {
-            wx.setStorageSync(repoListsKey, res.data);
-            const { language, description, forks } = appInstance.repoLists;
+            const { language, description, forks } = res.data;
             this.setData({
               language,
               description,
               forks,
             });
-            console.log(res.data, "repo");
+            console.log(res.data, this.properties.repoUrl, "repo");
           }
         },
       });
     },
     onRepoTap() {
-      wx.navigateTo({ url: "/pages/repo/index" });
+      const repoUrl = this.properties.repoUrl;
+      wx.navigateTo({ url: `/pages/repo/index?repoUrl=${repoUrl}` });
     },
   },
 });
