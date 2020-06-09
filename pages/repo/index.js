@@ -35,7 +35,7 @@ Page({
             events_url,
             collaborators_url,
           } = res.data;
-          const { login, avatar_url } = res.data.owner;
+          const { login, url } = res.data.owner;
           this.setData({
             name,
             description,
@@ -50,9 +50,9 @@ Page({
                 {
                   label: "作者",
                   key: login,
-                  url: avatar_url,
+                  url: url,
                   isLink: true,
-                  path: "/pages/me/index",
+                  path: "/pages/another-author/index",
                 },
                 { label: "视图代码", isLink: true },
                 { label: "分支", key: default_branch, url: branches_url },

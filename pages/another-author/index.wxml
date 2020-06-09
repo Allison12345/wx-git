@@ -1,0 +1,8 @@
+<!-- @format -->
+
+<person-info
+  Authorization="{{ Authorization }}"
+  info="{{ info }}"
+  InfoItems="{{ InfoItems }}"
+  items="{{ items }}"
+></person-info>
