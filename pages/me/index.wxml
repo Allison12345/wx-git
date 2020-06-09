@@ -1,43 +1,8 @@
 <!-- @format -->
 
-<my-page class="me">
-  <view wx:if="{{ Authorization }}">
-    <view class="me-top">
-      <view class="txt-center">
-        <author-photo img="{{ info.avatar_url }}"></author-photo>
-      </view>
-      <view class="me-hd">
-        <view class="txt-center">{{ info.name }}</view>
-        <view class="txt-center">{{ info.login }}</view>
-      </view>
-      <view class="me-bd">
-        <my-cells>
-          <view class="me-info__hd light-balck txt-center">{{ info.bio }}</view>
-          <view class="me-info__bd flex txt-center">
-            <me-info-item
-              class="flex-1"
-              wx:for="{{ InfoItems }}"
-              wx:key="index"
-              index="{{ index }}"
-              number="{{ item.number }}"
-              label="{{ item.label }}"
-              url="{{ item.url }}"
-            ></me-info-item>
-          </view>
-        </my-cells>
-      </view>
-    </view>
-    <my-cells wx:for="{{ items }}" wx:key="index">
-      <my-cell
-        wx:for="{{ item }}"
-        wx:key="index"
-        hd="{{ item.label }}"
-        ft="{{ item.key ? info[item.key] || '--' : '' }}"
-        isLink="{{ item.isLink }}"
-        path="{{ item.path }}"
-        bindtap="onRouteTap"
-      ></my-cell>
-    </my-cells>
-  </view>
-  <login-button class="login-button" wx:else></login-button>
-</my-page>
+<person-info
+  Authorization="{{ Authorization }}"
+  info="{{ info }}"
+  InfoItems="{{ InfoItems }}"
+  items="{{ items }}"
+></person-info>

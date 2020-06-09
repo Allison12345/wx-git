@@ -28,7 +28,9 @@ Page({
       ],
     ],
   },
-  onLoad() {
+  onLoad(query) {
+    // const { cellUrl } = query;
+    //this.getUserItems(cellUrl);
     const { data } = appInstance.userItems || {};
     console.log(data, "sdjhf");
     const { myInfo, meInfoItems } = appInstance;
@@ -40,9 +42,9 @@ Page({
     });
     console.log(this.data.InfoItems, "111111");
   },
-  getUserItems(username) {
+  getUserItems(url) {
     wx.request({
-      url: `${baseUrl}/users/${username}`,
+      url: `${baseUrl}/users/${url}`,
       method: "GET",
       header: {
         "content-type": "application/json",

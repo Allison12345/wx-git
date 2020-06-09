@@ -4,7 +4,7 @@
   <view class="repo-top">
     <view class="repo-hd">
       <view class="txt-center font-xl">{{ name }}</view>
-      <view wx:if="{{ repoHdInfo.description }}" class="txt-center font-l">{{
+      <view wx:if="{{ description }}" class="txt-center">{{
         description
       }}</view>
     </view>
@@ -28,7 +28,7 @@
       ft="{{ item.key ? info[item.key] || '--' : '' }}"
       isLink="{{ item.isLink }}"
       path="{{ item.path }}"
-      bindtap="onRouteTap"
+      url="{{ item.url }}"
     ></my-cell>
   </my-cells>
 </my-page>

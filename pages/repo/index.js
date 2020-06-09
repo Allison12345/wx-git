@@ -5,9 +5,9 @@ Page({
   data: {
     name: "",
     description: "",
-    info: "",
-    repoInfoItems: "",
-    repoItems: "",
+    info: {},
+    repoInfoItems: {},
+    repoItems: [],
   },
   onLoad: function (qurey) {
     const { repoUrl } = qurey;
@@ -37,8 +37,8 @@ Page({
           } = res.data;
           const { login, avatar_url } = res.data.owner;
           this.setData({
-            name: name,
-            description: description,
+            name,
+            description,
             info: { login, default_branch },
             repoInfoItems: [
               { number: watchers_count, label: "游览" },
@@ -52,6 +52,7 @@ Page({
                   key: login,
                   url: avatar_url,
                   isLink: true,
+                  path: "/pages/me/index",
                 },
                 { label: "视图代码", isLink: true },
                 { label: "分支", key: default_branch, url: branches_url },
@@ -64,7 +65,12 @@ Page({
               ],
             ],
           });
-          console.log(res.data, "activity-repo");
+          console.log(
+            res.data,
+            this.data.info,
+            this.data.description,
+            "activity-repo"
+          );
         }
       },
     });

@@ -1,0 +1,43 @@
+<!-- @format -->
+
+<my-page class="person">
+  <view wx:if="{{ Authorization }}">
+    <view class="person-top">
+      <view class="img">
+        <author-photo img="{{ info.avatar_url }}"></author-photo>
+      </view>
+      <view class="person-hd">
+        <view>{{ info.name }}</view>
+        <view>{{ info.login }}</view>
+      </view>
+      <view class="person-bd">
+        <my-cells>
+          <view class="person-info__hd">{{ info.bio }}</view>
+          <view class="person-info__bd">
+            <me-info-item
+              class="info-item"
+              wx:for="{{ InfoItems }}"
+              wx:key="index"
+              index="{{ index }}"
+              number="{{ item.number }}"
+              label="{{ item.label }}"
+              url="{{ item.url }}"
+            ></me-info-item>
+          </view>
+        </my-cells>
+      </view>
+    </view>
+    <my-cells wx:for="{{ items }}" wx:key="index">
+      <my-cell
+        wx:for="{{ item }}"
+        wx:key="index"
+        hd="{{ item.label }}"
+        ft="{{ item.key ? info[item.key] || '--' : '' }}"
+        isLink="{{ item.isLink }}"
+        path="{{ item.path }}"
+        bindtap="onRouteTap"
+      ></my-cell>
+    </my-cells>
+  </view>
+  <login-button class="login-button" wx:else></login-button>
+</my-page>

@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "my-page": "../my-page/index",
+    "author-photo": "../author-photo/index",
+    "my-cells": "../my-cells/index",
+    "my-cell": "../my-cell/index",
+    "me-info-item": "../me-info-item/index",
+    "login-button": "../login-button/index"
+  }
+}

@@ -1,4 +1,6 @@
-<view class="my-cell">
+<!-- @format -->
+
+<view class="my-cell" bindtap="onRouteTap">
   <view class="my-cell__hd" wx:if="{{ hd }}">{{ hd }}</view>
   <view class="my-cell__bd">
     <block wx:if="{{ bd }}">{{ bd }}</block>
