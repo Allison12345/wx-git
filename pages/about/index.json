@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-page": "../../components/my-page/index",
+    "githup-img":"../../components/githup-img/index"
+  }
+}

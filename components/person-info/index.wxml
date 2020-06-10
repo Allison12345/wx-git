@@ -35,6 +35,7 @@
         ft="{{ item.key ? info[item.key] || '--' : '' }}"
         isLink="{{ item.isLink }}"
         path="{{ item.path }}"
+        url="{{ item.url }}"
         bindtap="onRouteTap"
       ></my-cell>
     </my-cells>

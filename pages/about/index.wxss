@@ -1,0 +1,27 @@
+
+.about-hd{
+  font-size: 14px;
+  padding-top: 30px;
+}
+.img{
+  height: 100px;
+  padding: 10px;
+}
+.cellUrl{
+  padding: 10px;
+  color:rgb(53, 53, 247);
+}
+.about-bd{
+  margin-top: 20px;
+}
+.button{
+  width: 100px;
+  color: #fff;
+  padding: 10px;
+  margin: auto;  
+  background-color: rgb(45,141,241);
+  border-radius: 40px;
+}
+.about-ft{
+  padding-top: 60px;
+}

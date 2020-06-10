@@ -9,7 +9,8 @@
     "pages/repo/index",
     "pages/test/index",
     "pages/another-author/index",
-    "pages/issues/index"
+    "pages/issues/index",
+    "pages/about/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

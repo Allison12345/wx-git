@@ -15,7 +15,7 @@ Component({
   methods: {
     onRouteTap() {
       const { path, url } = this.properties;
-      console.log(url, "11111");
+      console.log(url, "222222222");
       wx.navigateTo({
         url: `${path}?cellUrl=${url}`,
       });

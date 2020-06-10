@@ -1,0 +1,19 @@
+<!-- @format -->
+
+<my-page>
+  <view class="about txt-center">
+    <view class="about-hd">
+      <image
+        class="img"
+        mode="aspectFit"
+        src="https://6d79-mywxapp-q4z0b-1301425530.tcb.qcloud.la/wx-git/grey-githup.jpg?sign=138b8f547c772574eb98f82d9a58d4d9&t=1591782760"
+      ></image>
+      <view>Gitter v1.1.1</view>
+      <a class="cellUrl" href="{{ cellUrl }}"> {{ cellUrl }}</a>
+    </view>
+    <view class="about-bd">
+      <view class="button" bindtap="onTap">登出</view>
+    </view>
+    <view class="about-ft">Support Gitter ❤️</view>
+  </view>
+</my-page>
