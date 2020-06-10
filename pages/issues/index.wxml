@@ -1,0 +1,24 @@
+<!-- @format -->
+
+<my-page>
+  <view class="issues">
+    <view class="issues-nav bg-white flex">
+      <nav-bar-item
+        wx:for="{{ navBarItems }}"
+        wx:key="*this"
+        label="{{ item }}"
+        index="{{ index }}"
+        isActive="{{ activeIndex === index }}"
+        bind:changeActiveIndex="OnActiveIndex"
+      ></nav-bar-item>
+    </view>
+    <issue-item
+      wx:for="{{ issueItems }}"
+      wx:key="*this"
+      index="{{ index }}"
+      title="{{ item.title }}"
+      comments="{{ item.comments }}"
+      created="{{ item.created_at }}"
+    ></issue-item>
+  </view>
+</my-page>

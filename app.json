@@ -8,7 +8,8 @@
     "pages/follow/index",
     "pages/repo/index",
     "pages/test/index",
-    "pages/another-author/index"
+    "pages/another-author/index",
+    "pages/issues/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

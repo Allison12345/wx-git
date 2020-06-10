@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-page": "../../components/my-page/index",
+    "nav-bar-item": "../../components/nav-bar-item/index",
+    "issue-item":"../../components/issue-item/index"
+  }
+}

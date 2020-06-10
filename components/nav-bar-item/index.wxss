@@ -2,6 +2,7 @@
   color: #333333;
   padding: 10rpx;
   width: 127.5px;
+  text-align: right;
 }
 .nav-item__label {
   width: 100%;

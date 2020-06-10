@@ -1,12 +1,15 @@
+/** @format */
+
 Component({
   properties: {
     label: String,
     isActive: Boolean,
-    index: Number
+    index: Number,
   },
   methods: {
     onTap() {
-      this.triggerEvent('myevent', this.properties.index, { bubbles: false })
-    }
-  }
-})
+      const { index } = this.properties;
+      this.triggerEvent("OnActiveIndex", index);
+    },
+  },
+});

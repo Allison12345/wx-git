@@ -1,0 +1,26 @@
+.issue-item {
+  margin: 0 10px 10px;
+  background-color: #fff;
+  display: flex;
+}
+.img{
+  width: 16px;
+  height: 16px;
+}
+.issue-item__hd {
+  padding: 10px;
+  text-align: center;
+}
+.issue-item__bd {
+  padding: 5px;
+}
+
+  .issue-item__bd-bottom {
+
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+  }
+  .issue-item__bd-dowm{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+  }

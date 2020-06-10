@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "red-eva-desc": "../red-eva-desc/index"
+  }
+}

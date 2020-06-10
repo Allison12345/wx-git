@@ -59,7 +59,12 @@ Page({
                 { label: "许可证", key: license },
               ],
               [
-                { label: "问题", isLink: true, url: issues_url },
+                {
+                  label: "问题",
+                  isLink: true,
+                  url: issues_url,
+                  path: "/pages/issues/index",
+                },
                 { label: "事件", isLink: true, url: events_url },
                 { label: "所在地", isLink: true, url: collaborators_url },
               ],
