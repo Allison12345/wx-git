@@ -31,7 +31,6 @@ Page({
           try {
             wx.setStorageSync(activityListsKey, res);
             this.setData({ activityLists: res.data });
-            console.log(this.activityLists, "this");
           } catch (e) {}
         }
       },
@@ -45,7 +44,6 @@ Page({
     wx.navigateTo({ url: "/pages/search/index" });
   },
   onPickerChange(e) {
-    console.log(e);
     this.setData({ pickerIndex: e.detail.value });
   },
   /**

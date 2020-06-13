@@ -1,6 +1,6 @@
 <!-- @format -->
 
-<view class="fork-desc">
+<view wx:if="{{ desc }}" class="fork-desc">
   <view class="outside"></view>
   <image
     class="img"

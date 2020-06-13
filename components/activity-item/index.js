@@ -36,7 +36,6 @@ Component({
               description,
               forks,
             });
-            console.log(res.data, this.properties.repoUrl, "repo");
           }
         },
       });

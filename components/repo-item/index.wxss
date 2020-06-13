@@ -3,8 +3,8 @@
   padding: 10px 20px;
   background-color: #fff;
 }
-.repo-item__bd {
-  margin: 5px 0;
+.repo-item__hd{
+  display: flex;
 }
 .ft-span {
   margin-right: 30px;
@@ -14,5 +14,4 @@
 }
 .repo-item__ft-down{
   font-size: 14px;
-  color: red;
 }

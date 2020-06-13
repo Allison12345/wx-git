@@ -1,34 +1,15 @@
 <!-- @format -->
 
 <my-page>
-  <view class="repo-top">
-    <view class="repo-hd">
-      <view class="txt-center font-xl">{{ name }}</view>
-      <view wx:if="{{ description }}" class="txt-center">{{
-        description
-      }}</view>
-    </view>
-    <view class="repo-bd">
-      <me-info-item
-        class="flex-1"
-        wx:for="{{ repoInfoItems }}"
-        wx:key="index"
-        index="{{ index }}"
-        number="{{ item.number }}"
-        label="{{ item.label }}"
-        url="{{ item.url }}"
-      ></me-info-item>
-    </view>
-  </view>
-  <my-cells wx:for="{{ repoItems }}" wx:key="index">
-    <my-cell
-      wx:for="{{ item }}"
-      wx:key="index"
-      hd="{{ item.label }}"
-      ft="{{ item.key ? info[item.key] || '--' : '' }}"
-      isLink="{{ item.isLink }}"
-      path="{{ item.path }}"
-      url="{{ item.url }}"
-    ></my-cell>
-  </my-cells>
+  <repo-item
+    wx:for="{{ repoItems }}"
+    wx:key="*this"
+    login="{{ item.owner.login }}"
+    name="{{ item.name }}"
+    desc="{{ item.description }}"
+    lang="{{ item.language }}"
+    update="{{ item.updated_at }}"
+    forks="{{ item.forks }}"
+  ></repo-item>
+  <page-bottom></page-bottom>
 </my-page>

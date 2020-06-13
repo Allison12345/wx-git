@@ -1,82 +1,27 @@
 /** @format */
+
 const appInstance = getApp();
 const { Authorization } = appInstance.globalData;
 Page({
   data: {
-    name: "",
-    description: "",
-    info: {},
-    repoInfoItems: {},
     repoItems: [],
   },
-  onLoad: function (qurey) {
-    const { repoUrl } = qurey;
-    this.getRepoList(repoUrl);
+  onLoad: function (query) {
+    const { itemUrl } = query;
+    console.log(itemUrl, "11111");
+    this.getRepoData(itemUrl);
   },
-  getRepoList(repoUrl) {
+  getRepoData(itemUrl) {
     wx.request({
-      url: repoUrl,
+      url: itemUrl,
       method: "GET",
       header: {
         "content-type": "application/json",
         Authorization,
       },
       success: (res) => {
-        if (res.statusCode === 200) {
-          const {
-            name,
-            description,
-            watchers_count,
-            forks,
-            default_branch,
-            branches_url,
-            license,
-            issues_url,
-            events_url,
-            collaborators_url,
-          } = res.data;
-          const { login, url } = res.data.owner;
-          this.setData({
-            name,
-            description,
-            info: { login, default_branch },
-            repoInfoItems: [
-              { number: watchers_count, label: "游览" },
-              { number: forks, label: "fork" },
-              { icon: forks, label: "share" },
-            ],
-            repoItems: [
-              [
-                {
-                  label: "作者",
-                  key: login,
-                  url: url,
-                  isLink: true,
-                  path: "/pages/another-author/index",
-                },
-                { label: "视图代码", isLink: true },
-                { label: "分支", key: default_branch, url: branches_url },
-                { label: "许可证", key: license },
-              ],
-              [
-                {
-                  label: "问题",
-                  isLink: true,
-                  url: issues_url,
-                  path: "/pages/issues/index",
-                },
-                { label: "事件", isLink: true, url: events_url },
-                { label: "所在地", isLink: true, url: collaborators_url },
-              ],
-            ],
-          });
-          console.log(
-            res.data,
-            this.data.info,
-            this.data.description,
-            "activity-repo"
-          );
-        }
+        console.log(res.data);
+        this.setData({ repoItems: res.data });
       },
     });
   },

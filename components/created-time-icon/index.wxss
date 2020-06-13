@@ -1,4 +1,4 @@
-.red-eva-desc{
+.created-time-icon{
   display: flex;
 }
 .text{

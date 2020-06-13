@@ -3,5 +3,5 @@
 <image
   wx:if="{{ text === todayStars || text === update }}"
   class="small-icon"
-  src="https://6d79-mywxapp-q4z0b-1301425530.tcb.qcloud.la/wx-git/red-star.png?sign=bad45cec78ba233cc32a196c30ab0333&t=1589880615"
+  src="https://6d79-mywxapp-q4z0b-1301425530.tcb.qcloud.la/wx-git/created-time.png?sign=b51f8478f1fdda25f49a08768d4639ce&t=1592034888"
 ></image>

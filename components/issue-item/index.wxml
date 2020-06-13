@@ -16,8 +16,6 @@
   <view class="issue-item__bd">
     <view class="issue-item__bd-top">{{ title }}</view>
     <view class="issue-item__bd-bottom"> {{ comments }} comments </view>
-    <view class="issue-item__bd-down"
-      ><red-eva-desc text="{{ created }}"></red-eva-desc
-    ></view>
+    <view class="issue-item__bd-down"><view text="{{ created }}"></view></view>
   </view>
 </view>

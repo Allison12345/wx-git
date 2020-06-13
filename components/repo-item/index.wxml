@@ -2,7 +2,7 @@
 
 <view class="repo-item">
   <view class="repo-item__hd">
-    <eva-icon name="book-outline"></eva-icon>
+    <view class="outside"><eva-icon name="book-outline"></eva-icon></view>
     {{ login }}/{{ name }}
   </view>
   <view class="repo-item__bd">{{ desc }} </view>
@@ -17,7 +17,10 @@
         wx:if="{{ todayStars }}"
         text="{{ todayStars }}"
       ></red-eva-desc>
-      <red-eva-desc wx:if="{{ update }}" text="{{ update }}"></red-eva-desc>
+      <created-time-icon
+        wx:if="{{ update }}"
+        text="{{ update }}"
+      ></created-time-icon>
     </view>
   </view>
 </view>

@@ -1,5 +1,7 @@
 .grey-star-desc{
   display: flex;
+  padding-top: 2px;
+
 }
 .text{
   padding-left: 5px;

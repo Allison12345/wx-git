@@ -1,8 +1,7 @@
 {
   "usingComponents": {
     "my-page": "../../components/my-page/index",
-    "my-cells": "../../components/my-cells/index",
-    "my-cell": "../../components/my-cell/index",
-    "me-info-item": "../../components/me-info-item/index"
+    "repo-item": "../../components/repo-item/index",
+    "page-bottom":"../../components/page-bottom/index"
   }
-}
+} 

@@ -1,6 +1,6 @@
 <!-- @format -->
 
-<view class="grey-star-desc">
+<view wx:if="{{ star }}" class="grey-star-desc">
   <image
     class="img"
     src="https://6d79-mywxapp-q4z0b-1301425530.tcb.qcloud.la/wx-git/grey-star.png?sign=aa2c28eca16826c7bbcd2d68a3693bc4&t=1591266117"

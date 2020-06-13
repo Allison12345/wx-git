@@ -1,0 +1,6 @@
+<!-- @format -->
+
+<view wx:if="{{ text }}" class="created-time-icon">
+  <small-icon text="{{ text }}"></small-icon>
+  <view class="text">{{ text }}</view></view
+>

@@ -1,6 +1,6 @@
 <!-- @format -->
 
-<view class="code-lang">
+<view wx:if="{{ code }}" class="code-lang">
   <view class="outside">
     <image
       class="img"
