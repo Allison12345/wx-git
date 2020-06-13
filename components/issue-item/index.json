@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "red-eva-desc": "../red-eva-desc/index"
+    "created-time-icon": "../created-time-icon/index"
   }
 }

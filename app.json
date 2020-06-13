@@ -10,7 +10,8 @@
     "pages/test/index",
     "pages/another-author/index",
     "pages/issues/index",
-    "pages/about/index"
+    "pages/about/index",
+    "pages/repo-info/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

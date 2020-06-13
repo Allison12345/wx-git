@@ -42,7 +42,7 @@ Component({
     },
     onRepoTap() {
       const repoUrl = this.properties.repoUrl;
-      wx.navigateTo({ url: `/pages/repo/index?repoUrl=${repoUrl}` });
+      wx.navigateTo({ url: `/pages/repo-info/index?repoUrl=${repoUrl}` });
     },
   },
 });

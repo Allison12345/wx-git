@@ -30,7 +30,7 @@ Page({
       },
     });
   },
-  changeActiveIndex(e) {
+  OnActiveIndex(e) {
     console.log(e, "Index");
     this.setData({ activeIndex: e.detail });
   },

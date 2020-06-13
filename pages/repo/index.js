@@ -20,7 +20,6 @@ Page({
         Authorization,
       },
       success: (res) => {
-        console.log(res.data);
         this.setData({ repoItems: res.data });
       },
     });

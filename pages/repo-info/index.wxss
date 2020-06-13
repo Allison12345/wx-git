@@ -1,0 +1,14 @@
+.repo-top{
+  background-color: rgb(45,141,241);
+}
+.repo-hd{
+  color: #fff;
+  padding: 10px;
+}
+.repo-bd{
+  margin: 0 20px;
+  background-color: #fff;
+  display: flex;
+  text-align: center;
+  padding: 10px;
+} 

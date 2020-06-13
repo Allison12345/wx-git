@@ -9,7 +9,7 @@
         label="{{ item }}"
         index="{{ index }}"
         isActive="{{ activeIndex === index }}"
-        bind:changeActiveIndex="OnActiveIndex"
+        bind:OnActiveIndex="OnActiveIndex"
       ></nav-bar-item>
     </view>
     <issue-item
