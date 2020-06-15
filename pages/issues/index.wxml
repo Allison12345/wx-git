@@ -13,12 +13,22 @@
       ></nav-bar-item>
     </view>
     <issue-item
-      wx:for="{{ issueItems }}"
+      wx:if="{{ activeIndex === 0 }}"
+      wx:for="{{ openItems }}"
       wx:key="*this"
       index="{{ index }}"
+      activeIndex="{{ activeIndex }}"
       title="{{ item.title }}"
       comments="{{ item.comments }}"
-      created="{{ item.created_at }}"
+    ></issue-item>
+    <issue-item
+      wx:if="{{ activeIndex === 1 }}"
+      wx:for="{{ closeItems }}"
+      wx:key="*this"
+      index="{{ index }}"
+      activeIndex="{{ activeIndex }}"
+      title="{{ item.title }}"
+      comments="{{ item.comments }}"
     ></issue-item>
   </view>
 </my-page>

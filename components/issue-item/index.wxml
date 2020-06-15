@@ -3,19 +3,18 @@
 <view class="issue-item">
   <view class="issue-item__hd">
     <image
-      wx:if="{{ index === 0 }}"
+      wx:if="{{ activeIndex === 0 }}"
       class="img"
-      src="https://6d79-mywxapp-q4z0b-1301425530.tcb.qcloud.la/wx-git/closed.png?sign=29c2e15443cf043529218dac678a710e&t=1591778307"
+      src="cloud://mywxapp-q4z0b.6d79-mywxapp-q4z0b-1301425530/wx-git/open.png"
     ></image>
     <image
       wx:else
       class="img"
-      src="cloud://mywxapp-q4z0b.6d79-mywxapp-q4z0b-1301425530/wx-git/open.png"
+      src="https://6d79-mywxapp-q4z0b-1301425530.tcb.qcloud.la/wx-git/closed.png?sign=29c2e15443cf043529218dac678a710e&t=1591778307"
     ></image>
   </view>
   <view class="issue-item__bd">
     <view class="issue-item__bd-top">{{ title }}</view>
     <view class="issue-item__bd-bottom"> {{ comments }} comments </view>
-    <view class="issue-item__bd-down"><view text="{{ created }}"></view></view>
   </view>
 </view>

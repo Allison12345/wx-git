@@ -7,6 +7,8 @@ Page({
     navBarItems: ["OPEN", "CLOSED"],
     activeIndex: 0,
     issueItems: [],
+    openItems: [],
+    closeItems: [],
   },
   onLoad: function (query) {
     const { cellUrl } = query;
@@ -27,8 +29,15 @@ Page({
           issueItems: res.data,
         });
         console.log(res.data);
+        this.filferItems(res.data);
       },
     });
+  },
+  filferItems(items) {
+    const openItems = items.filter((item) => item.state == "open");
+    const closeItems = items.filter((item) => item.state == "closed");
+    this.setData({ openItems, closeItems });
+    console.log(closeItems, "closeItems");
   },
   OnActiveIndex(e) {
     console.log(e, "Index");
