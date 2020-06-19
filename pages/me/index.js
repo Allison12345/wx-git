@@ -13,20 +13,26 @@ Page({
     const { data } = appInstance.userItems || {};
     console.log(data, "sdjhf");
     const { userItems, myInfo, meInfoItems } = appInstance;
-    const { html_url } = userItems.data;
-    this.getUserItems(myInfo.login);
+    const { html_url, starred_url, repos_url } = userItems.data;
+    this.getUserItems();
     this.setData({
       Authorization: appInstance.globalData.Authorization,
       info: { ...myInfo },
       InfoItems: [...meInfoItems],
       items: [
-        [{ label: "关注 vue-git ♥️" }],
         [
           {
-            label: "已关注",
+            label: "关注的库",
             isLink: true,
+            url: starred_url,
+            path: "",
           },
-          { label: "问题", isLink: true, path: "/issues" },
+          {
+            label: "问题",
+            isLink: true,
+            url: repos_url,
+            path: "/pages/issues/index",
+          },
         ],
         [
           { label: "邮箱", key: "email" },
@@ -48,7 +54,7 @@ Page({
   },
   getUserItems(url) {
     wx.request({
-      url: `${baseUrl}/users/${url}`,
+      url: url,
       method: "GET",
       header: {
         "content-type": "application/json",

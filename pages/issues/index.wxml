@@ -20,6 +20,7 @@
       activeIndex="{{ activeIndex }}"
       title="{{ item.title }}"
       comments="{{ item.comments }}"
+      full_name="{{ full_name }}"
     ></issue-item>
     <issue-item
       wx:if="{{ activeIndex === 1 }}"
@@ -29,6 +30,7 @@
       activeIndex="{{ activeIndex }}"
       title="{{ item.title }}"
       comments="{{ item.comments }}"
+      full_name="{{ full_name }}"
     ></issue-item>
   </view>
 </my-page>

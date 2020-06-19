@@ -15,6 +15,9 @@
   </view>
   <view class="issue-item__bd">
     <view class="issue-item__bd-top">{{ title }}</view>
-    <view class="issue-item__bd-bottom"> {{ comments }} comments </view>
+    <view class="issue-item__bd-middle"> {{ comments }} comments </view>
+    <view wx:if="{{ full_name }}" class="issue-item__bd-bottom">{{
+      full_name
+    }}</view>
   </view>
 </view>

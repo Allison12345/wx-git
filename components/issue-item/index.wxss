@@ -15,12 +15,12 @@
   padding: 5px;
 }
 
-  .issue-item__bd-bottom {
+  .issue-item__bd-middle {
 
     color: rgba(0, 0, 0, 0.5);
     font-size: 14px;
   }
-  .issue-item__bd-dowm{
-    color: rgba(0, 0, 0, 0.5);
+  .issue-item__bd-bottom{
+    color:rgb(45,141,241);
     font-size: 14px;
   }

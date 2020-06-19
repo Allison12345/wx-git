@@ -9,11 +9,21 @@ Page({
     issueItems: [],
     openItems: [],
     closeItems: [],
+    full_name: "",
   },
   onLoad: function (query) {
     const { cellUrl } = query;
-    const newUrl = cellUrl.replace("{/number}", "");
-    console.log(newUrl, "cell1111");
+    this.chooseUrl(cellUrl);
+  },
+  chooseUrl(url) {
+    if (url.indexOf("repos") != -1) {
+      this.getRepoList(url);
+    } else {
+      this.fixString(url);
+    }
+  },
+  fixString(url) {
+    const newUrl = url.replace("{/number}", "");
     this.getIssueItems(newUrl);
   },
   getIssueItems(newUrl) {
@@ -25,11 +35,31 @@ Page({
         Authorization,
       },
       success: (res) => {
+        const issueItems = res.data;
+        const newIssueItems = this.data.issueItems.concat(issueItems);
         this.setData({
-          issueItems: res.data,
+          issueItems: newIssueItems,
         });
-        console.log(res.data);
-        this.filferItems(res.data);
+        this.filferItems(newIssueItems);
+      },
+    });
+  },
+  getRepoList(repos_url) {
+    wx.request({
+      url: repos_url,
+      method: "GET",
+      header: {
+        "content-type": "application/json",
+        Authorization: appInstance.globalData.Authorization,
+      },
+      success: (res) => {
+        const { full_name } = res.data[0];
+        if (full_name !== null) {
+          this.setData({ full_name });
+        }
+        for (var i = 0; i < res.data.length; i++) {
+          this.fixString(res.data[i].issues_url);
+        }
       },
     });
   },
@@ -37,10 +67,8 @@ Page({
     const openItems = items.filter((item) => item.state == "open");
     const closeItems = items.filter((item) => item.state == "closed");
     this.setData({ openItems, closeItems });
-    console.log(closeItems, "closeItems");
   },
   OnActiveIndex(e) {
-    console.log(e, "Index");
     this.setData({ activeIndex: e.detail });
   },
 });

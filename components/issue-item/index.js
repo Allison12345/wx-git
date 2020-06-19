@@ -6,5 +6,6 @@ Component({
     comments: String,
     index: Number,
     activeIndex: Number,
+    full_name: String,
   },
 });
