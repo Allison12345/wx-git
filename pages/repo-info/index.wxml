@@ -1,9 +1,9 @@
 <!-- @format -->
 <my-page>
-  <view class="repo-top">
+  <view wx:if="{{ name }}" class="repo-top">
     <view class="repo-hd">
-      <view class="txt-center font-xl">{{ name }}</view>
-      <view wx:if="{{ description }}" class="txt-center">{{
+      <view class="txt-center font-l">{{ name }}</view>
+      <view wx:if="{{ description }}" class="txt-center font-m">{{
         description
       }}</view>
     </view>
@@ -28,6 +28,7 @@
       isLink="{{ item.isLink }}"
       path="{{ item.path }}"
       url="{{ item.url }}"
+      from="{{ item.from }}"
     ></my-cell>
   </my-cells>
 </my-page>

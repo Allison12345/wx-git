@@ -31,6 +31,7 @@ Page({
             label: "问题",
             isLink: true,
             url: repos_url,
+            from: "me",
             path: "/pages/issues/index",
           },
         ],

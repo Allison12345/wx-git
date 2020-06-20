@@ -2,7 +2,7 @@
 
 <my-page class="person">
   <view wx:if="{{ Authorization }}">
-    <view class="person-top">
+    <view wx:if="{{ info.name }}" class="person-top">
       <view class="img">
         <author-photo img="{{ info.avatar_url }}"></author-photo>
       </view>
@@ -36,6 +36,7 @@
         isLink="{{ item.isLink }}"
         path="{{ item.path }}"
         url="{{ item.url }}"
+        from="{{ item.from }}"
         bindtap="onRouteTap"
       ></my-cell>
     </my-cells>

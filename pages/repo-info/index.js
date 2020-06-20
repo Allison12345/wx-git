@@ -63,6 +63,7 @@ Page({
                   label: "问题",
                   isLink: true,
                   url: issues_url,
+                  from: "repo",
                   path: "/pages/issues/index",
                 },
                 { label: "事件", isLink: true, url: events_url },

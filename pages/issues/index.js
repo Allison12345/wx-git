@@ -9,16 +9,15 @@ Page({
     issueItems: [],
     openItems: [],
     closeItems: [],
-    full_name: "",
   },
   onLoad: function (query) {
-    const { cellUrl } = query;
-    this.chooseUrl(cellUrl);
+    const { cellUrl, from } = query;
+    this.chooseUrl(cellUrl, from);
   },
-  chooseUrl(url) {
-    if (url.indexOf("repos") != -1) {
+  chooseUrl(url, from) {
+    if (from == "me") {
       this.getRepoList(url);
-    } else {
+    } else if (from == "repo") {
       this.fixString(url);
     }
   },
@@ -53,10 +52,6 @@ Page({
         Authorization: appInstance.globalData.Authorization,
       },
       success: (res) => {
-        const { full_name } = res.data[0];
-        if (full_name !== null) {
-          this.setData({ full_name });
-        }
         for (var i = 0; i < res.data.length; i++) {
           this.fixString(res.data[i].issues_url);
         }

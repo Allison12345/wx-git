@@ -8,16 +8,16 @@ Component({
     path: String,
     isLink: Boolean,
     url: String,
+    from: String,
   },
   options: {
     multipleSlots: true,
   },
   methods: {
     onRouteTap() {
-      const { path, url } = this.properties;
-      console.log(url, "222222222");
+      const { path, url, from } = this.properties;
       wx.navigateTo({
-        url: `${path}?cellUrl=${url}`,
+        url: `${path}?cellUrl=${url}&from=${from}`,
       });
     },
   },
