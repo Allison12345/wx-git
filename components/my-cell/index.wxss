@@ -1,5 +1,5 @@
 .my-cell {
-  padding: 16px;
+  padding: 10px;
   position: relative;
   display: flex;
   align-items: center;

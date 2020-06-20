@@ -1,0 +1,10 @@
+<!-- @format -->
+
+<my-page>
+  <view-code-item
+    wx:for="{{ codeFiles }}"
+    wx:key="*this"
+    label="{{ item.label }}"
+    children="{{ item.children }}"
+  ></view-code-item>
+</my-page>

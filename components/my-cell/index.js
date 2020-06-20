@@ -5,6 +5,7 @@ Component({
     hd: String,
     bd: String,
     ft: String,
+    name: String,
     path: String,
     isLink: Boolean,
     url: String,

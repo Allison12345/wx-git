@@ -1,7 +1,10 @@
 <!-- @format -->
 
 <view class="my-cell" bindtap="onRouteTap">
-  <view class="my-cell__hd" wx:if="{{ hd }}">{{ hd }}</view>
+  <view class="my-cell__hd">
+    <block wx:if="{{ hd }}">{{ hd }}</block>
+    <eva-icon wx:if="{{ name }}" name="{{ name }}"></eva-icon>
+  </view>
   <view class="my-cell__bd">
     <block wx:if="{{ bd }}">{{ bd }}</block>
     <slot name="bd" wx:else></slot>

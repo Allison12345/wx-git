@@ -1,0 +1,4 @@
+.view-code-item{
+  margin: 10px;
+  background-color: #fff;
+}

@@ -11,7 +11,8 @@
     "pages/another-author/index",
     "pages/issues/index",
     "pages/about/index",
-    "pages/repo-info/index"
+    "pages/repo-info/index",
+    "pages/view-code/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-page": "../../components/my-page/index",
+    "view-code-item": "../../components/view-code-item/index"
+  }
+}
