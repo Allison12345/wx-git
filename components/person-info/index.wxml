@@ -2,7 +2,7 @@
 
 <my-page class="person">
   <view wx:if="{{ Authorization }}">
-    <view wx:if="{{ info.name }}" class="person-top">
+    <view class="person-top">
       <view class="img">
         <author-photo img="{{ info.avatar_url }}"></author-photo>
       </view>

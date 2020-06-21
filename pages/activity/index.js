@@ -1,5 +1,9 @@
 /** @format */
-const { baseUrl, activityListsKey } = require("../../config/index");
+const {
+  baseUrl,
+  activityListsKey,
+  languagesKey,
+} = require("../../config/index");
 const appInstance = getApp();
 Page({
   data: {
@@ -7,14 +11,21 @@ Page({
     activityLists: "",
     per_page: 20,
     page: 1,
-    pickerList: [
-      ["Today", "Week", "Month"],
-      ["All", "HTML", "JavaScript"],
-    ],
+    pickerList: [],
     pickerIndex: [1, 1],
   },
   onLoad() {
     this.getPublicRepoLits();
+  },
+  onShow() {
+    this.initPickerList();
+  },
+  initPickerList() {
+    const languagesChooseItems = wx.getStorageSync(languagesKey) || [];
+    this.setData({
+      pickerList: [["week", "month", "year"], languagesChooseItems],
+    });
+    console.log("languagesChooseItems", languagesChooseItems);
   },
   getPublicRepoLits() {
     const { Authorization } = appInstance.globalData;
@@ -54,6 +65,7 @@ Page({
     new_page = per_page + 20;
     new_page = page + 1;
     this.setData({ per_page: new_page, page: new_page });
+    this.getPublicRepoLits();
   },
   /**
    * 页面上拉触底事件的处理函数
@@ -62,5 +74,6 @@ Page({
     const { per_page } = this.data;
     new_page = per_page + 20;
     this.setData({ per_page: new_page });
+    this.getPublicRepoLits();
   },
 });

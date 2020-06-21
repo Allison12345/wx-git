@@ -11,10 +11,10 @@ Page({
   },
   onLoad(query) {
     const { data } = appInstance.userItems || {};
-    console.log(data, "sdjhf");
     const { userItems, myInfo, meInfoItems } = appInstance;
+    console.log(data, userItems, "sdjhf");
     const { html_url, starred_url, repos_url } = userItems.data;
-    this.getUserItems();
+    // this.getUserItems();
     this.setData({
       Authorization: appInstance.globalData.Authorization,
       info: { ...myInfo },

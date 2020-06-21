@@ -1,7 +1,7 @@
 <!-- @format -->
 <my-page>
   <language-cells-top
-    chooseItems="{{ chooseItems }}"
+    chooseItems="{{ languagesChooseItems }}"
     bind:onDeleteItem="onDeleteItem"
   ></language-cells-top>
   <scroll-view class="full" scroll-y scroll-into-view="{{ activeWord }}">
