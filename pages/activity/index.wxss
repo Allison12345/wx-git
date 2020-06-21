@@ -19,6 +19,7 @@
 }
 .activity {
   padding-top: 42px;
+  height: 100%;
 }
 .ft {
   position: absolute;

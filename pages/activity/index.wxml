@@ -13,7 +13,14 @@
       bindtap="onSearchTap"
     ></eva-icon>
   </view>
-  <view class="activity">
+  <scroll-view
+    refresher-enabled="{{ true }}"
+    refresher-threshold
+    refresher-triggered="{{ isRefresh }}"
+    bindrefresherrefresh="onPullDown"
+    bindscrolltolower="onBottom"
+    class="activity"
+  >
     <activity-item
       wx:for="{{ activityLists }}"
       wx:key="index"
@@ -23,7 +30,7 @@
       date="{{ item.created_at }}"
       repoUrl="{{ item.repo.url }}"
     ></activity-item>
-  </view>
+  </scroll-view>
   <view class="ft">
     <my-picker
       class="my-picker"

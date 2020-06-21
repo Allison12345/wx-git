@@ -11,6 +11,7 @@ Page({
     activityLists: "",
     per_page: 20,
     page: 1,
+    isRefresh: false,
     pickerList: [],
     pickerIndex: [1, 1],
   },
@@ -41,7 +42,7 @@ Page({
         if (res.statusCode === 200) {
           try {
             wx.setStorageSync(activityListsKey, res);
-            this.setData({ activityLists: res.data });
+            this.setData({ activityLists: res.data, isRefresh: false });
           } catch (e) {}
         }
       },
@@ -60,20 +61,17 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-    const { per_page, page } = this.data;
-    new_page = per_page + 20;
-    new_page = page + 1;
-    this.setData({ per_page: new_page, page: new_page });
+  onPullDown: function () {
+    this.setData({ page: 1, isRefresh: true });
+    console.log("onPullDownRefresh");
     this.getPublicRepoLits();
   },
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-    const { per_page } = this.data;
-    new_page = per_page + 20;
-    this.setData({ per_page: new_page });
+  onBottom: function () {
+    this.setData({ page: this.data.page + 1 });
+    console.log("onReachBottom");
     this.getPublicRepoLits();
   },
 });
