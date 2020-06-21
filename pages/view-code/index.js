@@ -3,19 +3,14 @@ const appInstance = getApp();
 const { Authorization } = appInstance.globalData;
 Page({
   data: {
-    codeFiles: Array(20)
-      .fill(0)
-      .map((_, index) => ({
-        label: String.fromCodePoint(parseInt(index + 65, 10)),
-        children: Math.random() > 0.5,
-      })),
+    codeFiles: [],
   },
   onLoad: function (query) {
     const { cellUrl } = query;
     this.fixUrl(cellUrl);
   },
   fixUrl(cellUrl) {
-    const newUrl = cellUrl.replace("/{archive_format}{/ref}", "");
+    const newUrl = cellUrl.replace("/{+path}", "");
     console.log(newUrl);
     this.getViewCodeItems(newUrl);
   },
@@ -28,8 +23,12 @@ Page({
         Authorization,
       },
       success: (res) => {
-        console.log(res.data);
+        const codeFiles = res.data;
+        this.setData({ codeFiles });
       },
     });
+  },
+  onTap(e) {
+    wx.navigateTo({ url: `/pages/view-code/index?cellUrl=${e.detail}` });
   },
 });

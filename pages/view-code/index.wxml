@@ -4,7 +4,9 @@
   <view-code-item
     wx:for="{{ codeFiles }}"
     wx:key="*this"
-    label="{{ item.label }}"
-    children="{{ item.children }}"
+    label="{{ item.name }}"
+    url="{{ item.url }}"
+    isLink="{{ item.type === 'dir' }}"
+    bind:tap="onTap"
   ></view-code-item>
 </my-page>

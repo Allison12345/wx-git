@@ -4,16 +4,28 @@
 Component({
   properties: {
     label: String,
-    children: String,
+    url: String,
     isLink: Boolean,
   },
-  lifetimes: {
-    attached() {},
-  },
   data: {
-    name: "",
+    icon: "",
+  },
+  lifetimes: {
+    attached() {
+      this.initIcon();
+    },
   },
   methods: {
-    onTap() {},
+    onTap() {
+      const { url, isLink } = this.properties;
+      if (isLink) {
+        this.triggerEvent("tap", url);
+      }
+    },
+    initIcon() {
+      this.setData({
+        icon: this.properties.isLink ? "folder-outline" : "file-outline",
+      });
+    },
   },
 });

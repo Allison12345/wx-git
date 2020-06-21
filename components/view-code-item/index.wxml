@@ -1,5 +1,5 @@
 <!-- @format -->
 
 <view class="view-code-item" bindtap="onTap">
-  <my-cell name="{{ name }}" bd="{{ label }}" isLink="{{ children }}"></my-cell>
+  <my-cell name="{{ icon }}" bd="{{ label }}" isLink="{{ isLink }}"></my-cell>
 </view>

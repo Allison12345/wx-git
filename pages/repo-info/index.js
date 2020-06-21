@@ -29,7 +29,7 @@ Page({
             description,
             watchers_count,
             forks,
-            archive_url,
+            contents_url,
             default_branch,
             branches_url,
             license,
@@ -58,7 +58,7 @@ Page({
                 {
                   label: "视图代码",
                   isLink: true,
-                  url: archive_url,
+                  url: contents_url,
                   path: "/pages/view-code/index",
                 },
                 { label: "分支", key: default_branch, url: branches_url },
